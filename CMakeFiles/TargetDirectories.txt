@@ -1,7 +1,0 @@
-/home/nickshu/GithubRepos/SecondProject/CMakeFiles/install/strip.dir
-/home/nickshu/GithubRepos/SecondProject/CMakeFiles/install/local.dir
-/home/nickshu/GithubRepos/SecondProject/CMakeFiles/edit_cache.dir
-/home/nickshu/GithubRepos/SecondProject/CMakeFiles/rebuild_cache.dir
-/home/nickshu/GithubRepos/SecondProject/CMakeFiles/install.dir
-/home/nickshu/GithubRepos/SecondProject/CMakeFiles/SecondProject.dir
-/home/nickshu/GithubRepos/SecondProject/CMakeFiles/list_install_components.dir
