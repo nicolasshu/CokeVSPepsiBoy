@@ -4,12 +4,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/nickshu/GithubRepos/SecondProject/Source/Character2D.cpp" "/home/nickshu/GithubRepos/SecondProject/cmake-build-debug/CMakeFiles/SecondProject.dir/Source/Character2D.cpp.o"
-  "/home/nickshu/GithubRepos/SecondProject/Source/Mover.cpp" "/home/nickshu/GithubRepos/SecondProject/cmake-build-debug/CMakeFiles/SecondProject.dir/Source/Mover.cpp.o"
-  "/home/nickshu/GithubRepos/SecondProject/Source/Sample2D.cpp" "/home/nickshu/GithubRepos/SecondProject/cmake-build-debug/CMakeFiles/SecondProject.dir/Source/Sample2D.cpp.o"
-  "/home/nickshu/GithubRepos/SecondProject/Source/Urho2DIsometricDemo.cpp" "/home/nickshu/GithubRepos/SecondProject/cmake-build-debug/CMakeFiles/SecondProject.dir/Source/Urho2DIsometricDemo.cpp.o"
+  "/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/Source/Character2D.cpp" "/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug/CMakeFiles/SecondProject.dir/Source/Character2D.cpp.o"
+  "/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/Source/Mover.cpp" "/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug/CMakeFiles/SecondProject.dir/Source/Mover.cpp.o"
+  "/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/Source/Sample2D.cpp" "/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug/CMakeFiles/SecondProject.dir/Source/Sample2D.cpp.o"
+  "/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/Source/Urho2DIsometricDemo.cpp" "/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug/CMakeFiles/SecondProject.dir/Source/Urho2DIsometricDemo.cpp.o"
   )
-set(CMAKE_CXX_COMPILER_ID "GNU")
+set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_CXX

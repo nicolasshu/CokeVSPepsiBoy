@@ -105,12 +105,12 @@ void Character2D::Update(float timeStep)
         node_->Translate(moveDir * timeStep);
 
     // Animate
-    if (input->GetKeyDown(KEY_SPACE))
-    {
-        if (animatedSprite->GetAnimation() != "attack")
-            animatedSprite->SetAnimation("attack", LM_FORCE_LOOPED);
-    }
-    else if (!moveDir.Equals(Vector3::ZERO))
+//    if (input->GetKeyDown(KEY_SPACE))
+//    {
+//        if (animatedSprite->GetAnimation() != "attack")
+//            animatedSprite->SetAnimation("attack", LM_FORCE_LOOPED);
+//    }
+    if (!moveDir.Equals(Vector3::ZERO))
     {
         if (animatedSprite->GetAnimation() != "run")
             animatedSprite->SetAnimation("run");

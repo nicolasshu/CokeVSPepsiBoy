@@ -1,3 +1,5 @@
 Makefile
 /CMakeFiles/*
-
+/Urho3D/*
+cmake-build-debug
+.DS_Store

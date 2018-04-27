@@ -173,7 +173,7 @@ Node* Sample2D::CreateCharacter(TileMapInfo2D info, float friction, Vector3 posi
     spriteNode->SetScale(scale);
     auto* animatedSprite = spriteNode->CreateComponent<AnimatedSprite2D>();
     // Get scml file and Play "idle" anim
-    auto* animationSet = cache->GetResource<AnimationSet2D>("Urho2D/imp/imp.scml");
+    auto* animationSet = cache->GetResource<AnimationSet2D>("Urho2D/man/man.scml");
     animatedSprite->SetAnimationSet(animationSet);
     animatedSprite->SetAnimation("idle");
     animatedSprite->SetLayer(3); // Put character over tile map (which is on layer 0) and over Orcs (which are on layer 2)
@@ -395,8 +395,8 @@ void Sample2D::CreateUIContent(const String& demoTitle, int remainingLifes, int 
 
     // Create the UI for displaying the remaining coins
     auto* coinsUI = ui->GetRoot()->CreateChild<BorderImage>("Coins");
-    coinsUI->SetTexture(cache->GetResource<Texture2D>("Urho2D/GoldIcon.png"));
-    coinsUI->SetSize(50, 50);
+    coinsUI->SetTexture(cache->GetResource<Texture2D>("Urho2D/Pepsi/pepsi_logo.png"));
+    coinsUI->SetSize(100, 100);
     coinsUI->SetImageRect(IntRect(0, 64, 60, 128));
     coinsUI->SetAlignment(HA_LEFT, VA_TOP);
     coinsUI->SetPosition(5, 5);
@@ -408,8 +408,8 @@ void Sample2D::CreateUIContent(const String& demoTitle, int remainingLifes, int 
 
     // Create the UI for displaying the remaining lifes
     auto* lifeUI = ui->GetRoot()->CreateChild<BorderImage>("Life");
-    lifeUI->SetTexture(cache->GetResource<Texture2D>("Urho2D/imp/imp_all.png"));
-    lifeUI->SetSize(70, 80);
+    lifeUI->SetTexture(cache->GetResource<Texture2D>("Urho2D/man/man_head.png"));
+    lifeUI->SetSize(120, 130);
     lifeUI->SetAlignment(HA_RIGHT, VA_TOP);
     lifeUI->SetPosition(-5, 5);
     auto* lifeText = lifeUI->CreateChild<Text>("LifeText");
@@ -470,7 +470,7 @@ void Sample2D::CreateUIContent(const String& demoTitle, int remainingLifes, int 
 
     // Create the instructions
     auto* instructionText = ui->GetRoot()->CreateChild<Text>("Instructions");
-    instructionText->SetText("Use WASD keys or Arrows to move\nPageUp/PageDown/MouseWheel to zoom\nF5/F7 to save/reload scene\n'Z' to toggle debug geometry\nSpace to fight");
+    instructionText->SetText("Use WASD keys or Arrows to move and run away from Brian Swenson \nPageUp/PageDown/MouseWheel zoom\nF5/F7 to save/reload scene\n'Z' to toggle debug geometry\nSpace to fight");
     instructionText->SetFont(cache->GetResource<Font>("Fonts/Anonymous Pro.ttf"), 15);
     instructionText->SetTextAlignment(HA_CENTER); // Center rows in relation to each other
     instructionText->SetAlignment(HA_CENTER, VA_CENTER);

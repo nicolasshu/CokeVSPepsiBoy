@@ -87,7 +87,7 @@ void Urho2DIsometricDemo::Start()
     CreateScene();
 
     // Create the UI content
-    sample2D_->CreateUIContent("ISOMETRIC 2.5D DEMO", character2D_->remainingLifes_, character2D_->remainingCoins_);
+    sample2D_->CreateUIContent("CokeVsPepsi", character2D_->remainingLifes_, character2D_->remainingCoins_);
     auto* ui = GetSubsystem<UI>();
     Button* playButton = static_cast<Button*>(ui->GetRoot()->GetChild("PlayButton", true));
     SubscribeToEvent(playButton, E_RELEASED, URHO3D_HANDLER(Urho2DIsometricDemo, HandlePlayButton));
@@ -174,11 +174,11 @@ void Urho2DIsometricDemo::HandleCollisionBegin(StringHash eventType, VariantMap&
         if (character2D_->remainingCoins_ == 0)
         {
             Text* instructions = static_cast<Text*>(ui->GetRoot()->GetChild("Instructions", true));
-            instructions->SetText("!!! You have all the coins !!!");
+            instructions->SetText("!!! You have all the Pepsi. Drink it all !!!");
         }
         Text* coinsText = static_cast<Text*>(ui->GetRoot()->GetChild("CoinsText", true));
         coinsText->SetText(String(character2D_->remainingCoins_)); // Update coins UI counter
-        sample2D_->PlaySoundEffect("Powerup.wav");
+        sample2D_->PlaySoundEffect("OpeningSoda.wav");
     }
 
     // Handle interactions with enemies
@@ -340,6 +340,8 @@ void Urho2DIsometricDemo::HandlePlayButton(StringHash eventType, VariantMap& eve
     exitButton->SetVisible(false);
     Button* playButton = static_cast<Button*>(ui->GetRoot()->GetChild("PlayButton", true));
     playButton->SetVisible(false);
+
+    sample2D_->PlaySoundEffect("Yum.wav");
 
     // Hide mouse cursor
     auto* input = GetSubsystem<Input>();
