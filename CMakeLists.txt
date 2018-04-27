@@ -1,37 +1,32 @@
-#
-# Copyright (c) 2008-2018 the Urho3D project.
-#
-# Permission is hereby granted, free of charge, to any person obtaining a copy
-# of this software and associated documentation files (the "Software"), to deal
-# in the Software without restriction, including without limitation the rights
-# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-# copies of the Software, and to permit persons to whom the Software is
-# furnished to do so, subject to the following conditions:
-#
-# The above copyright notice and this permission notice shall be included in
-# all copies or substantial portions of the Software.
-#
-# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-# THE SOFTWARE.
-#
+# Set CMake minimum version and CMake policy required by UrhoCommon module
+cmake_minimum_required (VERSION 3.2.3)
 
+# Set project name
+project (SecondProject)
+
+# Set Environment variable                                      #****
+set (ENV{URHO3D_HOME} "./Urho3D")                               #****
+set (ENV{CMAKE_SOURCE_DIR} "./Urho3D/CMake")                        #****
+
+
+# Set CMake modules search path
+set (CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/CMake/Modules)
+set (CMAKE_CXX_STANDARD 14)
+# Include UrhoCommon.cmake module after setting project name
+include (UrhoCommon)
+# Define target name
+set (TARGET_NAME ${PROJECT_NAME})
+
+# Define source files
+file(GLOB_RECURSE SOURCE_FILES "Source/*.*pp" "Source/*.h" ) #"Utilities2D/*.*pp" "Utilities2D/*.*h"
+
+# NEW THINGS
 if (NOT URHO3D_URHO2D)
     return ()
 endif ()
 
-# Define target name
-set (TARGET_NAME PepsiBoy)
-
 # Define source files
-define_source_files (EXTRA_H_FILES ${COMMON_SAMPLE_H_FILES} ../Utilities2D/Sample2D.h ../Utilities2D/Sample2D.cpp ../Utilities2D/Mover.h ../Utilities2D/Mover.cpp)
+#define_source_files (EXTRA_H_FILES ./Utilities2D/Sample2D.h ./Utilities2D/Sample2D.cpp ./Utilities2D/Mover.h ./Utilities2D/Mover.cpp)
 
 # Setup target with resource copying
 setup_main_executable ()
-
-# Setup test cases
-setup_test ()
