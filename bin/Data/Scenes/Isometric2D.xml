@@ -500,8 +500,8 @@
 			<attribute name="Animation" value="idle" />
 		</component>
 		<component type="RigidBody2D" id="1282" />
-		<component type="CollisionCircle2D" id="1283">
-			<attribute name="Radius" value="0.32" />
+		<component type="CollisionBox2D" id="1283">
+			<attribute name="Size" value="0.4 1.1" />
 			<attribute name="Trigger" value="true" />
 			<attribute name="Category Bits" value="1" />
 			<attribute name="Mask Bits" value="65535" />
@@ -522,8 +522,8 @@
 			<attribute name="Animation" value="idle" />
 		</component>
 		<component type="RigidBody2D" id="1285" />
-		<component type="CollisionCircle2D" id="1286">
-			<attribute name="Radius" value="0.32" />
+		<component type="CollisionBox2D" id="1286">
+			<attribute name="Size" value="0.4 1.1" />
 			<attribute name="Trigger" value="true" />
 			<attribute name="Category Bits" value="1" />
 			<attribute name="Mask Bits" value="65535" />
@@ -544,8 +544,8 @@
 			<attribute name="Animation" value="idle" />
 		</component>
 		<component type="RigidBody2D" id="1288" />
-		<component type="CollisionCircle2D" id="1289">
-			<attribute name="Radius" value="0.32" />
+		<component type="CollisionBox2D" id="1289">
+			<attribute name="Size" value="0.4 1.1" />
 			<attribute name="Trigger" value="true" />
 			<attribute name="Category Bits" value="1" />
 			<attribute name="Mask Bits" value="65535" />
@@ -566,8 +566,8 @@
 			<attribute name="Animation" value="idle" />
 		</component>
 		<component type="RigidBody2D" id="1291" />
-		<component type="CollisionCircle2D" id="1292">
-			<attribute name="Radius" value="0.32" />
+		<component type="CollisionBox2D" id="1292">
+			<attribute name="Size" value="0.4 1.1" />
 			<attribute name="Trigger" value="true" />
 			<attribute name="Category Bits" value="1" />
 			<attribute name="Mask Bits" value="65535" />
@@ -588,8 +588,8 @@
 			<attribute name="Animation" value="idle" />
 		</component>
 		<component type="RigidBody2D" id="1294" />
-		<component type="CollisionCircle2D" id="1295">
-			<attribute name="Radius" value="0.32" />
+		<component type="CollisionBox2D" id="1295">
+			<attribute name="Size" value="0.4 1.1" />
 			<attribute name="Trigger" value="true" />
 			<attribute name="Category Bits" value="1" />
 			<attribute name="Mask Bits" value="65535" />
@@ -610,8 +610,8 @@
 			<attribute name="Animation" value="idle" />
 		</component>
 		<component type="RigidBody2D" id="1297" />
-		<component type="CollisionCircle2D" id="1298">
-			<attribute name="Radius" value="0.32" />
+		<component type="CollisionBox2D" id="1298">
+			<attribute name="Size" value="0.4 1.1" />
 			<attribute name="Trigger" value="true" />
 			<attribute name="Category Bits" value="1" />
 			<attribute name="Mask Bits" value="65535" />
@@ -632,8 +632,8 @@
 			<attribute name="Animation" value="idle" />
 		</component>
 		<component type="RigidBody2D" id="1300" />
-		<component type="CollisionCircle2D" id="1301">
-			<attribute name="Radius" value="0.32" />
+		<component type="CollisionBox2D" id="1301">
+			<attribute name="Size" value="0.4 1.1" />
 			<attribute name="Trigger" value="true" />
 			<attribute name="Category Bits" value="1" />
 			<attribute name="Mask Bits" value="65535" />
@@ -654,8 +654,8 @@
 			<attribute name="Animation" value="idle" />
 		</component>
 		<component type="RigidBody2D" id="1303" />
-		<component type="CollisionCircle2D" id="1304">
-			<attribute name="Radius" value="0.32" />
+		<component type="CollisionBox2D" id="1304">
+			<attribute name="Size" value="0.4 1.1" />
 			<attribute name="Trigger" value="true" />
 			<attribute name="Category Bits" value="1" />
 			<attribute name="Mask Bits" value="65535" />
@@ -676,8 +676,8 @@
 			<attribute name="Animation" value="idle" />
 		</component>
 		<component type="RigidBody2D" id="1306" />
-		<component type="CollisionCircle2D" id="1307">
-			<attribute name="Radius" value="0.32" />
+		<component type="CollisionBox2D" id="1307">
+			<attribute name="Size" value="0.4 1.1" />
 			<attribute name="Trigger" value="true" />
 			<attribute name="Category Bits" value="1" />
 			<attribute name="Mask Bits" value="65535" />
@@ -698,8 +698,8 @@
 			<attribute name="Animation" value="idle" />
 		</component>
 		<component type="RigidBody2D" id="1309" />
-		<component type="CollisionCircle2D" id="1310">
-			<attribute name="Radius" value="0.32" />
+		<component type="CollisionBox2D" id="1310">
+			<attribute name="Size" value="0.4 1.1" />
 			<attribute name="Trigger" value="true" />
 			<attribute name="Category Bits" value="1" />
 			<attribute name="Mask Bits" value="65535" />
@@ -720,8 +720,8 @@
 			<attribute name="Animation" value="idle" />
 		</component>
 		<component type="RigidBody2D" id="1312" />
-		<component type="CollisionCircle2D" id="1313">
-			<attribute name="Radius" value="0.32" />
+		<component type="CollisionBox2D" id="1313">
+			<attribute name="Size" value="0.4 1.1" />
 			<attribute name="Trigger" value="true" />
 			<attribute name="Category Bits" value="1" />
 			<attribute name="Mask Bits" value="65535" />

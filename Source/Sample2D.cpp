@@ -240,9 +240,10 @@ Node* Sample2D::CreateCoin()
     animatedSprite->SetLayer(4);
     auto* body = node->CreateComponent<RigidBody2D>();
     body->SetBodyType(BT_STATIC);
-    auto* shape = node->CreateComponent<CollisionCircle2D>(); // Create circle shape
-    shape->SetRadius(0.32f); // Set radius
+    auto* shape = node->CreateComponent<CollisionBox2D>(); // Create circle shape
+    //shape->SetRadius(0.32f); // Set radius
     shape->SetTrigger(true);
+    shape->SetSize(0.4,1.1);
     return node;
 }
 
@@ -395,7 +396,7 @@ void Sample2D::CreateUIContent(const String& demoTitle, int remainingLifes, int 
 
     // Create the UI for displaying the remaining coins
     auto* coinsUI = ui->GetRoot()->CreateChild<BorderImage>("Coins");
-    coinsUI->SetTexture(cache->GetResource<Texture2D>("Urho2D/Pepsi/pepsi_logo.png"));
+    coinsUI->SetTexture(cache->GetResource<Texture2D>("Urho2D/PepsiIcon/pepsi_logo.png"));
     coinsUI->SetSize(60, 100);
     //Don't need this line, it makes us only use part of the image.
     //coinsUI->SetImageRect(IntRect(0, 64, 60, 128));
