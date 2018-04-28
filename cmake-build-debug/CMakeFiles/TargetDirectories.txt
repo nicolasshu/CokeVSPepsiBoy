@@ -1,7 +1,0 @@
-/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug/CMakeFiles/install/local.dir
-/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug/CMakeFiles/SecondProject.dir
-/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug/CMakeFiles/install/strip.dir
-/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug/CMakeFiles/install.dir
-/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug/CMakeFiles/list_install_components.dir

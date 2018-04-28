@@ -4,4 +4,6 @@ Makefile
 /Urho3D/*
 /cmake-build-debug/*
 .DS_Store
+.idea
 
+Urho3D

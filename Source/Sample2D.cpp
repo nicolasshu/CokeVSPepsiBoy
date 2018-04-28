@@ -396,8 +396,9 @@ void Sample2D::CreateUIContent(const String& demoTitle, int remainingLifes, int 
     // Create the UI for displaying the remaining coins
     auto* coinsUI = ui->GetRoot()->CreateChild<BorderImage>("Coins");
     coinsUI->SetTexture(cache->GetResource<Texture2D>("Urho2D/Pepsi/pepsi_logo.png"));
-    coinsUI->SetSize(100, 100);
-    coinsUI->SetImageRect(IntRect(0, 64, 60, 128));
+    coinsUI->SetSize(60, 100);
+    //Don't need this line, it makes us only use part of the image.
+    //coinsUI->SetImageRect(IntRect(0, 64, 60, 128));
     coinsUI->SetAlignment(HA_LEFT, VA_TOP);
     coinsUI->SetPosition(5, 5);
     auto* coinsText = coinsUI->CreateChild<Text>("CoinsText");
@@ -405,6 +406,7 @@ void Sample2D::CreateUIContent(const String& demoTitle, int remainingLifes, int 
     coinsText->SetFont(font, 24);
     coinsText->SetTextEffect(TE_SHADOW);
     coinsText->SetText(String(remainingCoins));
+    coinsText->SetColor(Color(1.0,0.0,0.0));
 
     // Create the UI for displaying the remaining lifes
     auto* lifeUI = ui->GetRoot()->CreateChild<BorderImage>("Life");
