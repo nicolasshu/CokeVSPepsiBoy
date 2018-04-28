@@ -345,6 +345,7 @@ void Urho2DIsometricDemo::HandlePlayButton(StringHash eventType, VariantMap& eve
 
     // Hide mouse cursor
     auto* input = GetSubsystem<Input>();
+    //input->SetMouseVisible(false);
     input->SetMouseVisible(true);
 }
 

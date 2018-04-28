@@ -422,20 +422,23 @@ void Sample2D::CreateUIContent(const String& demoTitle, int remainingLifes, int 
 
     // Create the fullscreen UI for start/end
     auto* fullUI = ui->GetRoot()->CreateChild<Window>("FullUI");
-    fullUI->SetStyleAuto();
+    fullUI->SetColor(Color(0.0,0.0,0.0));
+    //fullUI->SetStyleAuto();
     fullUI->SetSize(ui->GetRoot()->GetWidth(), ui->GetRoot()->GetHeight());
     fullUI->SetEnabled(false); // Do not react to input, only the 'Exit' and 'Play' buttons will
 
     // Create the title
     auto* title = fullUI->CreateChild<BorderImage>("Title");
     title->SetMinSize(fullUI->GetWidth(), 50);
-    title->SetTexture(cache->GetResource<Texture2D>("Textures/HeightMap.png"));
+    title->SetTexture(cache->GetResource<Texture2D>("Textures/Red_Blue.png"));
     title->SetFullImageRect();
+    title->SetTiled(true);
     title->SetAlignment(HA_CENTER, VA_TOP);
     auto* titleText = title->CreateChild<Text>("TitleText");
     titleText->SetAlignment(HA_CENTER, VA_CENTER);
     titleText->SetFont(font, 24);
     titleText->SetText(demoTitle);
+    titleText->SetColor(Color(0.0,0.0,0.0));
 
     // Create the image
     auto* spriteUI = fullUI->CreateChild<BorderImage>("Sprite");
