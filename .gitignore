@@ -1,3 +1,6 @@
 Makefile
 /CMakeFiles/*
 
+.idea/*
+Urho3D/*
+cmake-build-debug/*
