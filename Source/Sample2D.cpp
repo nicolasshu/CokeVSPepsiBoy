@@ -437,7 +437,7 @@ void Sample2D::CreateUIContent(const String& demoTitle, int remainingLifes, int 
 
     // Create the image
     auto* spriteUI = fullUI->CreateChild<BorderImage>("Sprite");
-    spriteUI->SetTexture(cache->GetResource<Texture2D>("Urho2D/imp/imp_all.png"));
+    spriteUI->SetTexture(cache->GetResource<Texture2D>("Urho2D/man/imp_all.png"));
     spriteUI->SetSize(238, 271);
     spriteUI->SetAlignment(HA_CENTER, VA_CENTER);
     spriteUI->SetPosition(0, - ui->GetRoot()->GetHeight() / 4);
