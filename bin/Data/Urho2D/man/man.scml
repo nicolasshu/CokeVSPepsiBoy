@@ -94,16 +94,16 @@
             </timeline>
             <timeline id="4" name="imp_handbig">
                 <key id="0">
-                    <object folder="0" file="4" x="80.895522" y="-41.07767" pivot_x="0.604478" pivot_y="0.57767" angle="0"/>
+                    <object folder="0" file="4" x="32.660228" y="-19.901199" pivot_x="0.604478" pivot_y="0.57767" angle="10.914133" scale_x="1" scale_y="1"/>
                 </key>
-                <key id="1" time="490" spin="0">
-                    <object folder="0" file="4" x="84.895522" y="-33.07767" pivot_x="0.604478" pivot_y="0.57767" angle="4.899282"/>
+                <key id="1" time="490" spin="-1">
+                    <object folder="0" file="4" x="30.777875" y="-21.312964" pivot_x="0.604478" pivot_y="0.57767" angle="17.88615"/>
                 </key>
-                <key id="2" time="684" spin="-1">
-                    <object folder="0" file="4" x="85.895522" y="-31.07767" pivot_x="0.604478" pivot_y="0.57767" angle="4.899282"/>
+                <key id="2" time="684">
+                    <object folder="0" file="4" x="31.777875" y="-25.195317" pivot_x="0.604478" pivot_y="0.57767" angle="15.394419" scale_x="1"/>
                 </key>
-                <key id="3" time="1272">
-                    <object folder="0" file="4" x="78.911849" y="-44.045017" pivot_x="0.604478" pivot_y="0.57767" angle="357.904022"/>
+                <key id="3" time="1272" spin="-1">
+                    <object folder="0" file="4" x="24.794202" y="-15.809723" pivot_x="0.604478" pivot_y="0.57767" angle="17.889771" scale_x="1"/>
                 </key>
             </timeline>
             <timeline id="5" name="imp_handsmall">
