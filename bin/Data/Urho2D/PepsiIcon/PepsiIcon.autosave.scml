@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spriter_data scml_version="1.0" generator="BrashMonkey Spriter" generator_version="r11">
+    <folder id="0" name="GoldIcon">
+        <file id="0" name="GoldIcon/4.png" width="64" height="64" pivot_x="0.5" pivot_y="0.5"/>
+    </folder>
+    <folder id="1">
+        <file id="0" name="pepsi1.png" width="600" height="600" pivot_x="0" pivot_y="1"/>
+    </folder>
+    <entity id="0" name="entity_000">
+        <animation id="0" name="idle" length="500" interval="100">
+            <mainline>
+                <key id="0">
+                    <object_ref id="0" timeline="4" key="0" z_index="0"/>
+                </key>
+                <key id="1" time="100">
+                    <object_ref id="0" timeline="0" key="0" z_index="0"/>
+                    <object_ref id="1" timeline="1" key="0" z_index="1"/>
+                </key>
+                <key id="2" time="200">
+                    <object_ref id="0" timeline="0" key="0" z_index="0"/>
+                    <object_ref id="1" timeline="2" key="0" z_index="1"/>
+                </key>
+                <key id="3" time="300">
+                    <object_ref id="0" timeline="0" key="1" z_index="0"/>
+                    <object_ref id="1" timeline="3" key="0" z_index="1"/>
+                </key>
+            </mainline>
+            <timeline id="0" name="1">
+                <key id="0" time="100" spin="0">
+                    <object folder="0" file="0" angle="0"/>
+                </key>
+                <key id="1" time="300" spin="0">
+                    <object folder="0" file="0" angle="0"/>
+                </key>
+            </timeline>
+            <timeline id="1" name="pepsi2">
+                <key id="0" time="100" spin="0">
+                    <object pivot_x="0" pivot_y="1" angle="0"/>
+                </key>
+            </timeline>
+            <timeline id="2" name="pepsi3">
+                <key id="0" time="200" spin="0">
+                    <object pivot_x="0" pivot_y="1" angle="0"/>
+                </key>
+            </timeline>
+            <timeline id="3" name="pepsi4">
+                <key id="0" time="300" spin="0">
+                    <object pivot_x="0" pivot_y="1" angle="0"/>
+                </key>
+            </timeline>
+            <timeline id="4" name="pepsi1">
+                <key id="0" spin="0">
+                    <object folder="1" file="0" x="-285.714295" y="292.85714"/>
+                </key>
+            </timeline>
+        </animation>
+    </entity>
+</spriter_data>

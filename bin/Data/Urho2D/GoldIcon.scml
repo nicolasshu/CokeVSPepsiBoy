@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<spriter_data scml_version="1.0" generator="BrashMonkey Spriter" generator_version="b8_1">
+<spriter_data scml_version="1.0" generator="BrashMonkey Spriter" generator_version="r11">
     <folder id="0" name="GoldIcon">
         <file id="0" name="GoldIcon/1.png" width="64" height="64" pivot_x="0.5" pivot_y="0.5"/>
         <file id="1" name="GoldIcon/2.png" width="64" height="64" pivot_x="0.5" pivot_y="0.5"/>
@@ -8,7 +8,7 @@
         <file id="4" name="GoldIcon/5.png" width="64" height="64" pivot_x="0.5" pivot_y="0.5"/>
     </folder>
     <entity id="0" name="entity_000">
-        <animation id="0" name="idle" length="500">
+        <animation id="0" name="idle" length="500" interval="100">
             <mainline>
                 <key id="0">
                     <object_ref id="0" timeline="0" key="0" z_index="0"/>
