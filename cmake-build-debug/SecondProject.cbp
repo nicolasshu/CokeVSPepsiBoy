@@ -8,78 +8,28 @@
 		<Option virtualFolders="CMake Files\;CMake Files\CMake\;CMake Files\CMake\Modules\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/nickshu/GithubRepos/SecondProject/cmake-build-debug"/>
+				<Option working_dir="/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/nickshu/GithubRepos/SecondProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/nickshu/GithubRepos/SecondProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/nickshu/GithubRepos/SecondProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/nickshu/GithubRepos/SecondProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="install/strip">
-				<Option working_dir="/home/nickshu/GithubRepos/SecondProject/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/nickshu/GithubRepos/SecondProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/strip"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/nickshu/GithubRepos/SecondProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/nickshu/GithubRepos/SecondProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/nickshu/GithubRepos/SecondProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="install/local">
-				<Option working_dir="/home/nickshu/GithubRepos/SecondProject/cmake-build-debug"/>
+				<Option working_dir="/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/nickshu/GithubRepos/SecondProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/nickshu/GithubRepos/SecondProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/nickshu/GithubRepos/SecondProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/nickshu/GithubRepos/SecondProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="rebuild_cache">
-				<Option working_dir="/home/nickshu/GithubRepos/SecondProject/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/nickshu/GithubRepos/SecondProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/nickshu/GithubRepos/SecondProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/nickshu/GithubRepos/SecondProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/nickshu/GithubRepos/SecondProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="edit_cache">
-				<Option working_dir="/home/nickshu/GithubRepos/SecondProject/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/nickshu/GithubRepos/SecondProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/nickshu/GithubRepos/SecondProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/nickshu/GithubRepos/SecondProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/nickshu/GithubRepos/SecondProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="install">
-				<Option working_dir="/home/nickshu/GithubRepos/SecondProject/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/nickshu/GithubRepos/SecondProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/nickshu/GithubRepos/SecondProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/nickshu/GithubRepos/SecondProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/nickshu/GithubRepos/SecondProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="list_install_components">
-				<Option working_dir="/home/nickshu/GithubRepos/SecondProject/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/nickshu/GithubRepos/SecondProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/nickshu/GithubRepos/SecondProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/nickshu/GithubRepos/SecondProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/nickshu/GithubRepos/SecondProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="SecondProject">
-				<Option output="/home/nickshu/GithubRepos/SecondProject/cmake-build-debug/bin/SecondProject" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/nickshu/GithubRepos/SecondProject/cmake-build-debug/bin"/>
+				<Option output="/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug/bin/SecondProject" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug/bin"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -96,29 +46,28 @@
 					<Add option="-DURHO3D_THREADING"/>
 					<Add option="-DURHO3D_URHO2D"/>
 					<Add option="-DURHO3D_WEBP"/>
-					<Add directory="/home/nickshu/GithubRepos/SecondProject/Urho3D/include"/>
-					<Add directory="/home/nickshu/GithubRepos/SecondProject/Urho3D/include/Urho3D/ThirdParty"/>
-					<Add directory="/home/nickshu/GithubRepos/SecondProject/Urho3D/include/Urho3D/ThirdParty/Bullet"/>
-					<Add directory="/home/nickshu/GithubRepos/SecondProject/Urho3D/include/Urho3D/ThirdParty/Lua"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/Urho3D/include"/>
+					<Add directory="/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/Urho3D/include/Urho3D/ThirdParty"/>
+					<Add directory="/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/Urho3D/include/Urho3D/ThirdParty/Bullet"/>
+					<Add directory="/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/Urho3D/include/Urho3D/ThirdParty/Lua"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
 					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/nickshu/GithubRepos/SecondProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 SecondProject"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/nickshu/GithubRepos/SecondProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/nickshu/GithubRepos/SecondProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/nickshu/GithubRepos/SecondProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug/Makefile&quot;  VERBOSE=1 SecondProject"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="SecondProject/fast">
-				<Option output="/home/nickshu/GithubRepos/SecondProject/cmake-build-debug/bin/SecondProject" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/nickshu/GithubRepos/SecondProject/cmake-build-debug/bin"/>
+				<Option output="/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug/bin/SecondProject" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug/bin"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -135,79 +84,128 @@
 					<Add option="-DURHO3D_THREADING"/>
 					<Add option="-DURHO3D_URHO2D"/>
 					<Add option="-DURHO3D_WEBP"/>
-					<Add directory="/home/nickshu/GithubRepos/SecondProject/Urho3D/include"/>
-					<Add directory="/home/nickshu/GithubRepos/SecondProject/Urho3D/include/Urho3D/ThirdParty"/>
-					<Add directory="/home/nickshu/GithubRepos/SecondProject/Urho3D/include/Urho3D/ThirdParty/Bullet"/>
-					<Add directory="/home/nickshu/GithubRepos/SecondProject/Urho3D/include/Urho3D/ThirdParty/Lua"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/Urho3D/include"/>
+					<Add directory="/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/Urho3D/include/Urho3D/ThirdParty"/>
+					<Add directory="/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/Urho3D/include/Urho3D/ThirdParty/Bullet"/>
+					<Add directory="/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/Urho3D/include/Urho3D/ThirdParty/Lua"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
 					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/nickshu/GithubRepos/SecondProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 SecondProject/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/nickshu/GithubRepos/SecondProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/nickshu/GithubRepos/SecondProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/nickshu/GithubRepos/SecondProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug/Makefile&quot;  VERBOSE=1 SecondProject/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/strip">
+				<Option working_dir="/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/strip"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install">
+				<Option working_dir="/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="list_install_components">
+				<Option working_dir="/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/nickshu/GithubRepos/SecondProject/Source/Character2D.cpp">
+		<Unit filename="/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/Source/Character2D.cpp">
 			<Option target="SecondProject"/>
 		</Unit>
-		<Unit filename="/home/nickshu/GithubRepos/SecondProject/Source/Character2D.h">
+		<Unit filename="/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/Source/Character2D.h">
 			<Option target="SecondProject"/>
 		</Unit>
-		<Unit filename="/home/nickshu/GithubRepos/SecondProject/Source/Mover.cpp">
+		<Unit filename="/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/Source/Mover.cpp">
 			<Option target="SecondProject"/>
 		</Unit>
-		<Unit filename="/home/nickshu/GithubRepos/SecondProject/Source/Mover.h">
+		<Unit filename="/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/Source/Mover.h">
 			<Option target="SecondProject"/>
 		</Unit>
-		<Unit filename="/home/nickshu/GithubRepos/SecondProject/Source/Sample.h">
+		<Unit filename="/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/Source/Sample.h">
 			<Option target="SecondProject"/>
 		</Unit>
-		<Unit filename="/home/nickshu/GithubRepos/SecondProject/Source/Sample2D.cpp">
+		<Unit filename="/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/Source/Sample2D.cpp">
 			<Option target="SecondProject"/>
 		</Unit>
-		<Unit filename="/home/nickshu/GithubRepos/SecondProject/Source/Sample2D.h">
+		<Unit filename="/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/Source/Sample2D.h">
 			<Option target="SecondProject"/>
 		</Unit>
-		<Unit filename="/home/nickshu/GithubRepos/SecondProject/Source/Urho2DIsometricDemo.cpp">
+		<Unit filename="/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/Source/Urho2DIsometricDemo.cpp">
 			<Option target="SecondProject"/>
 		</Unit>
-		<Unit filename="/home/nickshu/GithubRepos/SecondProject/Source/Urho2DIsometricDemo.h">
+		<Unit filename="/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/Source/Urho2DIsometricDemo.h">
 			<Option target="SecondProject"/>
 		</Unit>
-		<Unit filename="/home/nickshu/GithubRepos/SecondProject/bin/CoreData">
+		<Unit filename="/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/bin/CoreData">
 			<Option target="SecondProject"/>
 		</Unit>
-		<Unit filename="/home/nickshu/GithubRepos/SecondProject/bin/Data">
+		<Unit filename="/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/bin/Data">
 			<Option target="SecondProject"/>
 		</Unit>
-		<Unit filename="/home/nickshu/GithubRepos/SecondProject/CMakeLists.txt">
+		<Unit filename="/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/home/nickshu/GithubRepos/SecondProject/CMake/Modules/UrhoCommon.cmake">
+		<Unit filename="/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/CMake/Modules/CheckCompilerToolchain.cmake">
 			<Option virtualFolder="CMake Files\CMake\Modules\"/>
 		</Unit>
-		<Unit filename="/home/nickshu/GithubRepos/SecondProject/CMake/Modules/CheckHost.cmake">
+		<Unit filename="/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/CMake/Modules/CheckHost.cmake">
 			<Option virtualFolder="CMake Files\CMake\Modules\"/>
 		</Unit>
-		<Unit filename="/home/nickshu/GithubRepos/SecondProject/CMake/Modules/CheckCompilerToolchain.cmake">
+		<Unit filename="/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/CMake/Modules/CheckUrhoLibrary.cpp">
 			<Option virtualFolder="CMake Files\CMake\Modules\"/>
 		</Unit>
-		<Unit filename="/home/nickshu/GithubRepos/SecondProject/CMake/Modules/FindUrho3D.cmake">
+		<Unit filename="/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/CMake/Modules/FindUrho3D.cmake">
 			<Option virtualFolder="CMake Files\CMake\Modules\"/>
 		</Unit>
-		<Unit filename="/home/nickshu/GithubRepos/SecondProject/CMake/Modules/CheckUrhoLibrary.cpp">
+		<Unit filename="/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/CMake/Modules/GenerateExportHeader.cmake">
 			<Option virtualFolder="CMake Files\CMake\Modules\"/>
 		</Unit>
-		<Unit filename="/home/nickshu/GithubRepos/SecondProject/CMake/Modules/GenerateExportHeader.cmake">
+		<Unit filename="/Users/corporan/Documents/ECE6122/P4/CokeVSPepsiBoy/CMake/Modules/UrhoCommon.cmake">
 			<Option virtualFolder="CMake Files\CMake\Modules\"/>
 		</Unit>
 	</Project>

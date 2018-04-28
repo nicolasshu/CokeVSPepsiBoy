@@ -1,1 +1,0 @@
-/usr/bin/c++  -mtune=generic  -std=gnu++11 -Wno-invalid-offsetof -march=native -ffast-math -msse3 -pthread -fdiagnostics-color=auto -g -DDEBUG -D_DEBUG  -rdynamic CMakeFiles/FirstProject.dir/Source/Character2D.cpp.o CMakeFiles/FirstProject.dir/Source/Urho2DIsometricDemo.cpp.o  -o bin/FirstProject ../Urho3D/lib/libUrho3D.a -ldl -lm -lrt -lGL 
