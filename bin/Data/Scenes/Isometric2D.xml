@@ -496,7 +496,7 @@
 		<component type="AnimatedSprite2D" id="1281">
 			<attribute name="Layer" value="4" />
 			<attribute name="Entity" value="entity_000" />
-			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/GoldIcon.scml" />
+			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/PepsiIconRotate.scml" />
 			<attribute name="Animation" value="idle" />
 		</component>
 		<component type="RigidBody2D" id="1282" />
@@ -518,7 +518,7 @@
 		<component type="AnimatedSprite2D" id="1284">
 			<attribute name="Layer" value="4" />
 			<attribute name="Entity" value="entity_000" />
-			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/GoldIcon.scml" />
+			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/PepsiIconRotate.scml" />
 			<attribute name="Animation" value="idle" />
 		</component>
 		<component type="RigidBody2D" id="1285" />
@@ -540,7 +540,7 @@
 		<component type="AnimatedSprite2D" id="1287">
 			<attribute name="Layer" value="4" />
 			<attribute name="Entity" value="entity_000" />
-			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/GoldIcon.scml" />
+			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/PepsiIconRotate.scml" />
 			<attribute name="Animation" value="idle" />
 		</component>
 		<component type="RigidBody2D" id="1288" />
@@ -562,7 +562,7 @@
 		<component type="AnimatedSprite2D" id="1290">
 			<attribute name="Layer" value="4" />
 			<attribute name="Entity" value="entity_000" />
-			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/GoldIcon.scml" />
+			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/PepsiIconRotate.scml" />
 			<attribute name="Animation" value="idle" />
 		</component>
 		<component type="RigidBody2D" id="1291" />
@@ -584,7 +584,7 @@
 		<component type="AnimatedSprite2D" id="1293">
 			<attribute name="Layer" value="4" />
 			<attribute name="Entity" value="entity_000" />
-			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/GoldIcon.scml" />
+			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/PepsiIconRotate.scml" />
 			<attribute name="Animation" value="idle" />
 		</component>
 		<component type="RigidBody2D" id="1294" />
@@ -606,7 +606,7 @@
 		<component type="AnimatedSprite2D" id="1296">
 			<attribute name="Layer" value="4" />
 			<attribute name="Entity" value="entity_000" />
-			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/GoldIcon.scml" />
+			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/PepsiIconRotate.scml" />
 			<attribute name="Animation" value="idle" />
 		</component>
 		<component type="RigidBody2D" id="1297" />
@@ -628,7 +628,7 @@
 		<component type="AnimatedSprite2D" id="1299">
 			<attribute name="Layer" value="4" />
 			<attribute name="Entity" value="entity_000" />
-			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/GoldIcon.scml" />
+			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/PepsiIconRotate.scml" />
 			<attribute name="Animation" value="idle" />
 		</component>
 		<component type="RigidBody2D" id="1300" />
@@ -650,7 +650,7 @@
 		<component type="AnimatedSprite2D" id="1302">
 			<attribute name="Layer" value="4" />
 			<attribute name="Entity" value="entity_000" />
-			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/GoldIcon.scml" />
+			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/PepsiIconRotate.scml" />
 			<attribute name="Animation" value="idle" />
 		</component>
 		<component type="RigidBody2D" id="1303" />
@@ -672,7 +672,7 @@
 		<component type="AnimatedSprite2D" id="1305">
 			<attribute name="Layer" value="4" />
 			<attribute name="Entity" value="entity_000" />
-			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/GoldIcon.scml" />
+			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/PepsiIconRotate.scml" />
 			<attribute name="Animation" value="idle" />
 		</component>
 		<component type="RigidBody2D" id="1306" />
@@ -694,7 +694,7 @@
 		<component type="AnimatedSprite2D" id="1308">
 			<attribute name="Layer" value="4" />
 			<attribute name="Entity" value="entity_000" />
-			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/GoldIcon.scml" />
+			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/PepsiIconRotate.scml" />
 			<attribute name="Animation" value="idle" />
 		</component>
 		<component type="RigidBody2D" id="1309" />
@@ -716,7 +716,7 @@
 		<component type="AnimatedSprite2D" id="1311">
 			<attribute name="Layer" value="4" />
 			<attribute name="Entity" value="entity_000" />
-			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/GoldIcon.scml" />
+			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/PepsiIconRotate.scml" />
 			<attribute name="Animation" value="idle" />
 		</component>
 		<component type="RigidBody2D" id="1312" />

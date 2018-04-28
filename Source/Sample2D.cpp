@@ -234,7 +234,7 @@ Node* Sample2D::CreateCoin()
     Node* node = scene_->CreateChild("Coin");
     node->SetScale(0.5);
     auto* animatedSprite = node->CreateComponent<AnimatedSprite2D>();
-    auto* animationSet = cache->GetResource<AnimationSet2D>("Urho2D/GoldIcon.scml");
+    auto* animationSet = cache->GetResource<AnimationSet2D>("Urho2D/PepsiIconRotate.scml");
     animatedSprite->SetAnimationSet(animationSet); // Get scml file and Play "idle" anim
     animatedSprite->SetAnimation("idle");
     animatedSprite->SetLayer(4);
