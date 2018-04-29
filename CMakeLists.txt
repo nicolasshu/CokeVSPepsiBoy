@@ -6,7 +6,7 @@ project (Untamed)
 # Set CMake modules search path
 set (CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/CMake/Modules)
 set (CMAKE_CXX_STANDARD 14)
-set(ENV{URHO3D_HOME} "/home/yzkuris/Urho3D")
+set(ENV{URHO3D_HOME} "../Urho3D")
 # Include UrhoCommon.cmake module after setting project name
 include (UrhoCommon)
 # Define target name

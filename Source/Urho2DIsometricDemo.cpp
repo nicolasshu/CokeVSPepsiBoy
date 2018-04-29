@@ -49,6 +49,8 @@
 #include <Urho3D/Graphics/Zone.h>
 #include <Urho3D/Urho2D/PhysicsEvents2D.h>
 
+#include <iostream>
+
 #include <Urho3D/DebugNew.h>
 
 #include "Character2D.h"
@@ -115,6 +117,7 @@ void Urho2DIsometricDemo::CreateScene()
     auto* graphics = GetSubsystem<Graphics>();
     camera->SetOrthoSize((float)graphics->GetHeight() * PIXEL_SIZE);
     camera->SetZoom(2.0f * Min((float)graphics->GetWidth() / 1280.0f, (float)graphics->GetHeight() / 800.0f)); // Set zoom according to user's resolution to ensure full visibility (initial zoom (2.0) is set for full visibility at 1280x800 resolution)
+    cameraNode_->SetPosition(Vector3(-5.0f, 11.0f, -10.0f));
 
     // Setup the viewport for displaying the scene
     SharedPtr<Viewport> viewport(new Viewport(context_, scene_, camera));
@@ -136,7 +139,6 @@ void Urho2DIsometricDemo::CreateScene()
     // Scale character's speed on the Y axis according to tiles' aspect ratio
     character2D_->moveSpeedScale_ = info.tileHeight_ / info.tileWidth_;
     character2D_->zoom_ = camera->GetZoom();
-
     // Generate physics collision shapes from the tmx file's objects located in "Physics" (top) layer
     TileMapLayer2D* tileMapLayer = tileMap->GetLayer(tileMap->GetNumLayers() - 1);
     sample2D_->CreateCollisionShapesFromTMXObjects(tileMapNode, tileMapLayer, info);
@@ -271,7 +273,8 @@ void Urho2DIsometricDemo::HandlePostUpdate(StringHash eventType, VariantMap& eve
         return;
 
     Node* character2DNode = character2D_->GetNode();
-    cameraNode_->SetPosition(Vector3(character2DNode->GetPosition().x_, character2DNode->GetPosition().y_, -10.0f)); // Camera tracks character
+    // cameraNode_->SetPosition(Vector3(character2DNode->GetPosition().x_, character2DNode->GetPosition().y_, -10.0f)); // Camera tracks character
+    std::cout << character2DNode->GetPosition().x_ << ',' << character2DNode->GetPosition().y_ << std::endl;
 }
 
 void Urho2DIsometricDemo::HandlePostRenderUpdate(StringHash eventType, VariantMap& eventData)
