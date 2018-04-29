@@ -196,7 +196,7 @@ void Sample::SetWindowTitleAndIcon()
     Graphics* graphics = GetSubsystem<Graphics>();
     Image* icon = cache->GetResource<Image>("Textures/UrhoIcon.png");
     graphics->SetWindowIcon(icon);
-    graphics->SetWindowTitle("Urho3D Sample");
+    graphics->SetWindowTitle("CokeVsPepsiBoy");
 }
 
 void Sample::CreateConsoleAndDebugHud()
