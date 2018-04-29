@@ -273,9 +273,8 @@
 		<component type="AnimatedSprite2D" id="1246">
 			<attribute name="Layer" value="2" />
 			<attribute name="Flip X" value="true" />
-			<attribute name="Draw Rectangle" value="-0 -0.58 0.82 0" />
-			<attribute name="Entity" value="Orc" />
-			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/Orc/Orc.scml" />
+			<attribute name="Entity" value="entity_000" />
+			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/Swenson/Swenson.scml" />
 			<attribute name="Animation" value="run" />
 		</component>
 		<component type="RigidBody2D" id="1247" />
@@ -301,9 +300,8 @@
 		<component type="AnimatedSprite2D" id="1250">
 			<attribute name="Layer" value="2" />
 			<attribute name="Flip X" value="true" />
-			<attribute name="Draw Rectangle" value="-0 -0.58 0.82 0" />
-			<attribute name="Entity" value="Orc" />
-			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/Orc/Orc.scml" />
+			<attribute name="Entity" value="entity_000" />
+			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/Swenson/Swenson.scml" />
 			<attribute name="Animation" value="run" />
 		</component>
 		<component type="RigidBody2D" id="1251" />
@@ -329,9 +327,8 @@
 		<component type="AnimatedSprite2D" id="1254">
 			<attribute name="Layer" value="2" />
 			<attribute name="Flip X" value="true" />
-			<attribute name="Draw Rectangle" value="-0 -0.58 0.82 0" />
-			<attribute name="Entity" value="Orc" />
-			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/Orc/Orc.scml" />
+			<attribute name="Entity" value="entity_000" />
+			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/Swenson/Swenson.scml" />
 			<attribute name="Animation" value="run" />
 		</component>
 		<component type="RigidBody2D" id="1255" />
@@ -357,9 +354,8 @@
 		<component type="AnimatedSprite2D" id="1258">
 			<attribute name="Layer" value="2" />
 			<attribute name="Flip X" value="true" />
-			<attribute name="Draw Rectangle" value="-0 -0.58 0.82 0" />
-			<attribute name="Entity" value="Orc" />
-			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/Orc/Orc.scml" />
+			<attribute name="Entity" value="entity_000" />
+			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/Swenson/Swenson.scml" />
 			<attribute name="Animation" value="run" />
 		</component>
 		<component type="RigidBody2D" id="1259" />
@@ -385,9 +381,8 @@
 		<component type="AnimatedSprite2D" id="1262">
 			<attribute name="Layer" value="2" />
 			<attribute name="Flip X" value="true" />
-			<attribute name="Draw Rectangle" value="-0 -0.58 0.82 0" />
-			<attribute name="Entity" value="Orc" />
-			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/Orc/Orc.scml" />
+			<attribute name="Entity" value="entity_000" />
+			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/Swenson/Swenson.scml" />
 			<attribute name="Animation" value="run" />
 		</component>
 		<component type="RigidBody2D" id="1263" />
@@ -413,9 +408,8 @@
 		<component type="AnimatedSprite2D" id="1266">
 			<attribute name="Layer" value="2" />
 			<attribute name="Flip X" value="true" />
-			<attribute name="Draw Rectangle" value="-0 -0.58 0.82 0" />
-			<attribute name="Entity" value="Orc" />
-			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/Orc/Orc.scml" />
+			<attribute name="Entity" value="entity_000" />
+			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/Swenson/Swenson.scml" />
 			<attribute name="Animation" value="run" />
 		</component>
 		<component type="RigidBody2D" id="1267" />
@@ -441,9 +435,8 @@
 		<component type="AnimatedSprite2D" id="1270">
 			<attribute name="Layer" value="2" />
 			<attribute name="Flip X" value="true" />
-			<attribute name="Draw Rectangle" value="-0 -0.58 0.82 0" />
-			<attribute name="Entity" value="Orc" />
-			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/Orc/Orc.scml" />
+			<attribute name="Entity" value="entity_000" />
+			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/Swenson/Swenson.scml" />
 			<attribute name="Animation" value="run" />
 		</component>
 		<component type="RigidBody2D" id="1271" />
@@ -469,9 +462,8 @@
 		<component type="AnimatedSprite2D" id="1274">
 			<attribute name="Layer" value="2" />
 			<attribute name="Flip X" value="true" />
-			<attribute name="Draw Rectangle" value="-0 -0.58 0.82 0" />
-			<attribute name="Entity" value="Orc" />
-			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/Orc/Orc.scml" />
+			<attribute name="Entity" value="entity_000" />
+			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/Swenson/Swenson.scml" />
 			<attribute name="Animation" value="run" />
 		</component>
 		<component type="RigidBody2D" id="1275" />

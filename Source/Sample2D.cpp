@@ -217,7 +217,7 @@ Node* Sample2D::CreateOrc()
     Node* node = scene_->CreateChild("Orc");
     node->SetScale(scene_->GetChild("Imp", true)->GetScale());
     auto* animatedSprite = node->CreateComponent<AnimatedSprite2D>();
-    auto* animationSet = cache->GetResource<AnimationSet2D>("Urho2D/Orc/Orc.scml");
+    auto* animationSet = cache->GetResource<AnimationSet2D>("Urho2D/Swenson/Swenson.scml");
     animatedSprite->SetAnimationSet(animationSet);
     animatedSprite->SetAnimation("run"); // Get scml file and Play "run" anim
     animatedSprite->SetLayer(2); // Make orc always visible

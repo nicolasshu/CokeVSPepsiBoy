@@ -50,8 +50,10 @@
 #include <Urho3D/Urho2D/PhysicsEvents2D.h>
 
 #include <iostream>
+#include <stdlib.h> // For sleep
 
 #include <Urho3D/DebugNew.h>
+#include <zconf.h>
 
 #include "Character2D.h"
 #include "Sample2D.h"
@@ -96,6 +98,8 @@ void Urho2DIsometricDemo::Start()
 
     // Hook up to the frame update events
     SubscribeToEvents();
+
+
 }
 
 void Urho2DIsometricDemo::CreateScene()
@@ -216,8 +220,11 @@ void Urho2DIsometricDemo::HandleCollisionBegin(StringHash eventType, VariantMap&
                 sample2D_->PlaySoundEffect("BigExplosion.wav");
             }
         }
-        cameraNode_->SetPosition(Vector3(-5.0f, 11.0f, -10.0f));
+
+
     }
+
+
 }
 
 void Urho2DIsometricDemo::HandleSceneRendered(StringHash eventType, VariantMap& eventData)
@@ -310,9 +317,14 @@ void Urho2DIsometricDemo::HandlePostUpdate(StringHash eventType, VariantMap& eve
         cameraNode_->SetPosition(Vector3(cameraNode_->GetPosition().x_+moveDir.x_, cameraNode_->GetPosition().y_+moveDir.y_,
                                          -10.0f)); // Camera tracks character
     }
-    std::cout << "Boy: (" << character2DNode->GetPosition().x_ << "," << character2DNode->GetPosition().y_ << "," << character2DNode->GetPosition().z_ << std::endl;
-    std::cout << "Camera Movement: (" << moveDir.x_ << ',' << moveDir.y_ << ',' << moveDir.z_ << ")" << std::endl;
-    std::cout << "Camera: (" << cameraNode_->GetPosition().x_ << ',' << cameraNode_->GetPosition().y_ << ',' << cameraNode_->GetPosition().z_ << ")" << std::endl;
+    if (character2DNode->GetPosition().x_ == -5.0f && character2DNode->GetPosition().y_ == 11.0f) {
+        cameraNode_->SetPosition(Vector3(-5.0f, 11.0f, -10.0f));
+    }
+
+
+    // std::cout << "Boy: (" << character2DNode->GetPosition().x_ << "," << character2DNode->GetPosition().y_ << "," << character2DNode->GetPosition().z_ << std::endl;
+    // std::cout << "Camera Movement: (" << moveDir.x_ << ',' << moveDir.y_ << ',' << moveDir.z_ << ")" << std::endl;
+    // std::cout << "Camera: (" << cameraNode_->GetPosition().x_ << ',' << cameraNode_->GetPosition().y_ << ',' << cameraNode_->GetPosition().z_ << ")" << std::endl;
 }
 
 void Urho2DIsometricDemo::HandlePostRenderUpdate(StringHash eventType, VariantMap& eventData)
