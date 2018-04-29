@@ -176,7 +176,8 @@ void Urho2DIsometricDemo::HandleCollisionBegin(StringHash eventType, VariantMap&
         if (character2D_->remainingCoins_ == 0)
         {
             Text* instructions = static_cast<Text*>(ui->GetRoot()->GetChild("Instructions", true));
-            instructions->SetText("!!! You have all the Pepsi. Drink it all !!!");
+            instructions->SetText("You have all the Pepsi. Drink it all !!!");
+            sample2D_->PlaySoundEffect("Winning.wav");
         }
         Text* coinsText = static_cast<Text*>(ui->GetRoot()->GetChild("CoinsText", true));
         coinsText->SetText(String(character2D_->remainingCoins_)); // Update coins UI counter
