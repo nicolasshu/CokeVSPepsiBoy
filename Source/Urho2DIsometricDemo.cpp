@@ -215,6 +215,7 @@ void Urho2DIsometricDemo::HandleCollisionBegin(StringHash eventType, VariantMap&
                 sample2D_->PlaySoundEffect("BigExplosion.wav");
             }
         }
+        cameraNode_->SetPosition(Vector3(-5.0f, 11.0f, -10.0f));
     }
 }
 
@@ -243,6 +244,7 @@ void Urho2DIsometricDemo::SubscribeToEvents()
 
     // Subscribe to Box2D contact listeners
     SubscribeToEvent(E_PHYSICSBEGINCONTACT2D, URHO3D_HANDLER(Urho2DIsometricDemo, HandleCollisionBegin));
+
 }
 
 void Urho2DIsometricDemo::HandleUpdate(StringHash eventType, VariantMap& eventData)
@@ -273,8 +275,43 @@ void Urho2DIsometricDemo::HandlePostUpdate(StringHash eventType, VariantMap& eve
         return;
 
     Node* character2DNode = character2D_->GetNode();
-    // cameraNode_->SetPosition(Vector3(character2DNode->GetPosition().x_, character2DNode->GetPosition().y_, -10.0f)); // Camera tracks character
-    std::cout << character2DNode->GetPosition().x_ << ',' << character2DNode->GetPosition().y_ << std::endl;
+    float moveSpeedScale_(1.0f);
+    auto* input = GetSubsystem<Input>();
+    // Set direction
+    Vector3 moveDir = Vector3::ZERO; // Reset
+    float speedX = Clamp(MOVE_SPEED_X / zoom_, 0.4f, 1.0f);
+    float speedY = speedX;
+
+    if (input->GetKeyDown('A') )
+    {
+        moveDir = moveDir + Vector3::LEFT * speedX;
+
+    }
+    if (input->GetKeyDown('D') )
+    {
+        moveDir = moveDir + Vector3::RIGHT * speedX;
+
+    }
+
+    if (!moveDir.Equals(Vector3::ZERO))
+        speedY = speedX * moveSpeedScale_;
+
+    if (input->GetKeyDown('W') )
+        moveDir = moveDir + Vector3::UP * speedY;
+    if (input->GetKeyDown('S') )
+        moveDir = moveDir + Vector3::DOWN * speedY;
+
+    if (!moveDir.Equals(Vector3::ZERO)) {
+        // node_->Translate(moveDir * timeStep);
+        double timeStep = 0.005;
+        moveDir = moveDir*timeStep;
+
+        cameraNode_->SetPosition(Vector3(cameraNode_->GetPosition().x_+moveDir.x_, cameraNode_->GetPosition().y_+moveDir.y_,
+                                         -10.0f)); // Camera tracks character
+    }
+    std::cout << "Boy: (" << character2DNode->GetPosition().x_ << "," << character2DNode->GetPosition().y_ << "," << character2DNode->GetPosition().z_ << std::endl;
+    std::cout << "Camera Movement: (" << moveDir.x_ << ',' << moveDir.y_ << ',' << moveDir.z_ << ")" << std::endl;
+    std::cout << "Camera: (" << cameraNode_->GetPosition().x_ << ',' << cameraNode_->GetPosition().y_ << ',' << cameraNode_->GetPosition().z_ << ")" << std::endl;
 }
 
 void Urho2DIsometricDemo::HandlePostRenderUpdate(StringHash eventType, VariantMap& eventData)
