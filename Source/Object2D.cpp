@@ -63,6 +63,7 @@ Sample2D::Sample2D(Context* context) :
 {}
 
 void Sample2D::CreateCollisionShapesFromTMXObjects(Node* tileMapNode, TileMapLayer2D* tileMapLayer, TileMapInfo2D info) {
+    
     // Create rigid body to the root node
     auto* body = tileMapNode->CreateComponent<RigidBody2D>();
     body->SetBodyType(BT_STATIC);
@@ -103,6 +104,7 @@ void Sample2D::CreateCollisionShapesFromTMXObjects(Node* tileMapNode, TileMapLay
 }
 
 CollisionBox2D* Sample2D::CreateRectangleShape(Node* node, TileMapObject2D* object, Vector2 size, TileMapInfo2D info) {
+
     auto* shape = node->CreateComponent<CollisionBox2D>();
     shape->SetSize(size);
     if (info.orientation_ == O_ORTHOGONAL)
@@ -119,6 +121,7 @@ CollisionBox2D* Sample2D::CreateRectangleShape(Node* node, TileMapObject2D* obje
 }
 
 CollisionCircle2D* Sample2D::CreateCircleShape(Node* node, TileMapObject2D* object, float radius, TileMapInfo2D info) {
+
     auto* shape = node->CreateComponent<CollisionCircle2D>();
     Vector2 size = object->GetSize();
     if (info.orientation_ == O_ORTHOGONAL)
@@ -136,6 +139,7 @@ CollisionCircle2D* Sample2D::CreateCircleShape(Node* node, TileMapObject2D* obje
 }
 
 CollisionPolygon2D* Sample2D::CreatePolygonShape(Node* node, TileMapObject2D* object) {
+
     auto* shape = node->CreateComponent<CollisionPolygon2D>();
     int numVertices = object->GetNumPoints();
     shape->SetVertexCount(numVertices);
@@ -148,6 +152,7 @@ CollisionPolygon2D* Sample2D::CreatePolygonShape(Node* node, TileMapObject2D* ob
 }
 
 CollisionChain2D* Sample2D::CreatePolyLineShape(Node* node, TileMapObject2D* object) {
+
     auto* shape = node->CreateComponent<CollisionChain2D>();
     int numVertices = object->GetNumPoints();
     shape->SetVertexCount(numVertices);
@@ -160,6 +165,7 @@ CollisionChain2D* Sample2D::CreatePolyLineShape(Node* node, TileMapObject2D* obj
 }
 
 Node* Sample2D::CreateCharacter(TileMapInfo2D info, float friction, Vector3 position, float scale) {
+
     auto* cache = GetSubsystem<ResourceCache>();
     Node* spriteNode = scene_->CreateChild("Imp");
     spriteNode->SetPosition(position);
@@ -191,6 +197,7 @@ Node* Sample2D::CreateCharacter(TileMapInfo2D info, float friction, Vector3 posi
 //}
 
 Node* Sample2D::CreateEnemy() {
+
     auto* cache = GetSubsystem<ResourceCache>();
     Node* node = scene_->CreateChild("Enemy");
     auto* staticSprite = node->CreateComponent<StaticSprite2D>();
@@ -203,6 +210,7 @@ Node* Sample2D::CreateEnemy() {
 }
 
 Node* Sample2D::CreateBrian() {
+
     auto* cache = GetSubsystem<ResourceCache>();
     Node* node = scene_->CreateChild("Orc");
     node->SetScale(scene_->GetChild("Imp", true)->GetScale());
@@ -219,6 +227,7 @@ Node* Sample2D::CreateBrian() {
 }
 
 Node* Sample2D::CreatePepsi() {
+
     auto* cache = GetSubsystem<ResourceCache>();
     Node* node = scene_->CreateChild("Pepsi");
     node->SetScale(0.5);
@@ -237,6 +246,7 @@ Node* Sample2D::CreatePepsi() {
 }
 
 Node* Sample2D::CreateMovingPlatform() {
+
     auto* cache = GetSubsystem<ResourceCache>();
     Node* node = scene_->CreateChild("MovingPlatform");
     node->SetScale(Vector3(3.0f, 1.0f, 0.0f));
@@ -251,6 +261,7 @@ Node* Sample2D::CreateMovingPlatform() {
 }
 
 void Sample2D::PopulateMovingEntities(TileMapLayer2D* movingEntitiesLayer) {
+
     // Create enemy (will be cloned at each placeholder)
     Node* enemyNode = CreateEnemy();
     Node* brianNode = CreateBrian();
