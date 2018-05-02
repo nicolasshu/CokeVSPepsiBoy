@@ -361,7 +361,7 @@ void CreateUIContent(String demoTitle)
 
     // Create the UI for displaying the remaining lifes
     BorderImage@ lifeUI = ui.root.CreateChild("BorderImage", "Life");
-    lifeUI.texture = cache.GetResource("Texture2D", "Urho2D/imp/imp_all.png");
+    lifeUI.texture = cache.GetResource("Texture2D", "Urho2D/imp/man_all.png");
     lifeUI.SetSize(70, 80);
     lifeUI.SetAlignment(HA_RIGHT, VA_TOP);
     lifeUI.SetPosition(-5, 5);
@@ -390,7 +390,7 @@ void CreateUIContent(String demoTitle)
 
     // Create the image
     BorderImage@ spriteUI = fullUI.CreateChild("BorderImage", "Sprite");
-    spriteUI.texture = cache.GetResource("Texture2D", "Urho2D/imp/imp_all.png");
+    spriteUI.texture = cache.GetResource("Texture2D", "Urho2D/imp/man_all.png");
     spriteUI.SetSize(238, 271);
     spriteUI.SetAlignment(HA_CENTER, VA_CENTER);
     spriteUI.SetPosition(0, - ui.root.height / 4);
