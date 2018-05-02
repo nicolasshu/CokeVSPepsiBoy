@@ -150,13 +150,13 @@ void Urho2DIsometricDemo::CreateScene()
     // Instantiate enemies at each placeholder of "MovingEntities" layer (placeholders are Poly Line objects defining a path from points)
     sample2D_->PopulateMovingEntities(tileMap->GetLayer(tileMap->GetNumLayers() - 2));
 
-    // Instantiate coins to pick at each placeholder of "Coins" layer (placeholders for coins are Rectangle objects)
-    TileMapLayer2D* coinsLayer = tileMap->GetLayer(tileMap->GetNumLayers() - 3);
-    sample2D_->PopulateCoins(coinsLayer);
+    // Instantiate pepsis to pick at each placeholder of "Pepsis" layer (placeholders for pepsis are Rectangle objects)
+    TileMapLayer2D* pepsisLayer = tileMap->GetLayer(tileMap->GetNumLayers() - 3);
+    sample2D_->PopulatePepsis(pepsisLayer);
 
-    // Init coins counters
-    character2D_->remainingPepsis_ = coinsLayer->GetNumObjects();
-    character2D_->maxPepsis_ = coinsLayer->GetNumObjects();
+    // Init pepsis counters
+    character2D_->remainingPepsis_ = pepsisLayer->GetNumObjects();
+    character2D_->maxPepsis_ = pepsisLayer->GetNumObjects();
 
     // Check when scene is rendered
     SubscribeToEvent(E_ENDRENDERING, URHO3D_HANDLER(Urho2DIsometricDemo, HandleSceneRendered));
@@ -171,8 +171,8 @@ void Urho2DIsometricDemo::HandleCollisionBegin(StringHash eventType, VariantMap&
     String nodeName = hitNode->GetName();
     Node* character2DNode = scene_->GetChild("Imp", true);
 
-    // Handle coins picking
-    if (nodeName == "Coin")
+    // Handle Pepsis picking
+    if (nodeName == "Pepsi")
     {
         hitNode->Remove();
         character2D_->remainingPepsis_ -= 1;
@@ -181,10 +181,14 @@ void Urho2DIsometricDemo::HandleCollisionBegin(StringHash eventType, VariantMap&
         {
             Text* instructions = static_cast<Text*>(ui->GetRoot()->GetChild("Instructions", true));
             instructions->SetText("You have all the Pepsi. Drink it all !!!");
+            static_cast<Text*>(ui->GetRoot()->GetChild("ExitButton", true))->SetVisible(true);
+            static_cast<Text*>(ui->GetRoot()->GetChild("PlayButton", true))->SetVisible(true);
+
+
             sample2D_->PlaySoundEffect("Winning.wav");
         }
-        Text* coinsText = static_cast<Text*>(ui->GetRoot()->GetChild("CoinsText", true));
-        coinsText->SetText(String(character2D_->remainingPepsis_)); // Update coins UI counter
+        Text* pepsisText = static_cast<Text*>(ui->GetRoot()->GetChild("CoinsText", true));
+        pepsisText->SetText(String(character2D_->remainingPepsis_)); // Update pepsis UI counter
         sample2D_->PlaySoundEffect("OpeningSoda.wav");
     }
 
@@ -194,20 +198,20 @@ void Urho2DIsometricDemo::HandleCollisionBegin(StringHash eventType, VariantMap&
         auto* animatedSprite = character2DNode->GetComponent<AnimatedSprite2D>();
         float deltaX = character2DNode->GetPosition().x_ - hitNode->GetPosition().x_;
 
-        // Orc killed if character is fighting in its direction when the contact occurs
-        if (animatedSprite->GetAnimation() == "attack" && (deltaX < 0 == animatedSprite->GetFlipX()))
-        {
-            static_cast<Mover*>(hitNode->GetComponent<Mover>())->emitTime_ = 1;
-            if (!hitNode->GetChild("Emitter", true))
-            {
-                hitNode->GetComponent("RigidBody2D")->Remove(); // Remove Orc's body
-                sample2D_->SpawnEffect(hitNode);
-                sample2D_->PlaySoundEffect("BigExplosion.wav");
-            }
-        }
+//        // Orc killed if character is fighting in its direction when the contact occurs
+//        if (animatedSprite->GetAnimation() == "attack" && (deltaX < 0 == animatedSprite->GetFlipX()))
+//        {
+//            static_cast<Mover*>(hitNode->GetComponent<Mover>())->emitTime_ = 1;
+//            if (!hitNode->GetChild("Emitter", true))
+//            {
+//                hitNode->GetComponent("RigidBody2D")->Remove(); // Remove Orc's body
+//                sample2D_->SpawnEffect(hitNode);
+//                sample2D_->PlaySoundEffect("BigExplosion.wav");
+//            }
+//        }
         // Player killed if not fighting in the direction of the Orc when the contact occurs
-        else
-        {
+//        else
+//        {
             if (!character2DNode->GetChild("Emitter", true))
             {
                 character2D_->wounded_ = true;
@@ -219,7 +223,7 @@ void Urho2DIsometricDemo::HandleCollisionBegin(StringHash eventType, VariantMap&
                 sample2D_->SpawnEffect(character2DNode);
                 sample2D_->PlaySoundEffect("BigExplosion.wav");
             }
-        }
+//        }
 
 
     }
@@ -356,11 +360,11 @@ void Urho2DIsometricDemo::ReloadScene(bool reInit)
 
     // Set what number to use depending whether reload is requested from 'PLAY' button (reInit=true) or 'F7' key (reInit=false)
     int lifes = character2D_->remainingLifes_;
-    int coins = character2D_->remainingPepsis_;
+    int pepsis = character2D_->remainingPepsis_;
     if (reInit)
     {
         lifes = LIFES;
-        coins = character2D_->maxPepsis_;
+        pepsis = character2D_->maxPepsis_;
     }
 
     // Update lifes UI
@@ -370,7 +374,7 @@ void Urho2DIsometricDemo::ReloadScene(bool reInit)
 
     // Update pepsis UI
     Text* coinsText = static_cast<Text*>(ui->GetRoot()->GetChild("CoinsText", true));
-    coinsText->SetText(String(coins));
+    coinsText->SetText(String(pepsis));
 }
 
 void Urho2DIsometricDemo::HandlePlayButton(StringHash eventType, VariantMap& eventData)

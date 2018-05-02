@@ -60,11 +60,9 @@
 
 Sample2D::Sample2D(Context* context) :
     Object(context)
-{
-}
+{}
 
-void Sample2D::CreateCollisionShapesFromTMXObjects(Node* tileMapNode, TileMapLayer2D* tileMapLayer, TileMapInfo2D info)
-{
+void Sample2D::CreateCollisionShapesFromTMXObjects(Node* tileMapNode, TileMapLayer2D* tileMapLayer, TileMapInfo2D info) {
     // Create rigid body to the root node
     auto* body = tileMapNode->CreateComponent<RigidBody2D>();
     body->SetBodyType(BT_STATIC);
@@ -104,8 +102,7 @@ void Sample2D::CreateCollisionShapesFromTMXObjects(Node* tileMapNode, TileMapLay
     }
 }
 
-CollisionBox2D* Sample2D::CreateRectangleShape(Node* node, TileMapObject2D* object, Vector2 size, TileMapInfo2D info)
-{
+CollisionBox2D* Sample2D::CreateRectangleShape(Node* node, TileMapObject2D* object, Vector2 size, TileMapInfo2D info) {
     auto* shape = node->CreateComponent<CollisionBox2D>();
     shape->SetSize(size);
     if (info.orientation_ == O_ORTHOGONAL)
@@ -121,8 +118,7 @@ CollisionBox2D* Sample2D::CreateRectangleShape(Node* node, TileMapObject2D* obje
     return shape;
 }
 
-CollisionCircle2D* Sample2D::CreateCircleShape(Node* node, TileMapObject2D* object, float radius, TileMapInfo2D info)
-{
+CollisionCircle2D* Sample2D::CreateCircleShape(Node* node, TileMapObject2D* object, float radius, TileMapInfo2D info) {
     auto* shape = node->CreateComponent<CollisionCircle2D>();
     Vector2 size = object->GetSize();
     if (info.orientation_ == O_ORTHOGONAL)
@@ -139,8 +135,7 @@ CollisionCircle2D* Sample2D::CreateCircleShape(Node* node, TileMapObject2D* obje
     return shape;
 }
 
-CollisionPolygon2D* Sample2D::CreatePolygonShape(Node* node, TileMapObject2D* object)
-{
+CollisionPolygon2D* Sample2D::CreatePolygonShape(Node* node, TileMapObject2D* object) {
     auto* shape = node->CreateComponent<CollisionPolygon2D>();
     int numVertices = object->GetNumPoints();
     shape->SetVertexCount(numVertices);
@@ -152,8 +147,7 @@ CollisionPolygon2D* Sample2D::CreatePolygonShape(Node* node, TileMapObject2D* ob
     return shape;
 }
 
-CollisionChain2D* Sample2D::CreatePolyLineShape(Node* node, TileMapObject2D* object)
-{
+CollisionChain2D* Sample2D::CreatePolyLineShape(Node* node, TileMapObject2D* object) {
     auto* shape = node->CreateComponent<CollisionChain2D>();
     int numVertices = object->GetNumPoints();
     shape->SetVertexCount(numVertices);
@@ -165,8 +159,7 @@ CollisionChain2D* Sample2D::CreatePolyLineShape(Node* node, TileMapObject2D* obj
     return shape;
 }
 
-Node* Sample2D::CreateCharacter(TileMapInfo2D info, float friction, Vector3 position, float scale)
-{
+Node* Sample2D::CreateCharacter(TileMapInfo2D info, float friction, Vector3 position, float scale) {
     auto* cache = GetSubsystem<ResourceCache>();
     Node* spriteNode = scene_->CreateChild("Imp");
     spriteNode->SetPosition(position);
@@ -188,18 +181,16 @@ Node* Sample2D::CreateCharacter(TileMapInfo2D info, float friction, Vector3 posi
     return spriteNode;
 }
 
-Node* Sample2D::CreateTrigger()
-{
-    Node* node = scene_->CreateChild(); // Clones will be renamed according to object type
-    auto* body = node->CreateComponent<RigidBody2D>();
-    body->SetBodyType(BT_STATIC);
-    auto* shape = node->CreateComponent<CollisionBox2D>(); // Create box shape
-    shape->SetTrigger(true);
-    return node;
-}
+//Node* Sample2D::CreateTrigger() {
+//    Node* node = scene_->CreateChild(); // Clones will be renamed according to object type
+//    auto* body = node->CreateComponent<RigidBody2D>();
+//    body->SetBodyType(BT_STATIC);
+//    auto* shape = node->CreateComponent<CollisionBox2D>(); // Create box shape
+//    shape->SetTrigger(true);
+//    return node;
+//}
 
-Node* Sample2D::CreateEnemy()
-{
+Node* Sample2D::CreateEnemy() {
     auto* cache = GetSubsystem<ResourceCache>();
     Node* node = scene_->CreateChild("Enemy");
     auto* staticSprite = node->CreateComponent<StaticSprite2D>();
@@ -211,8 +202,7 @@ Node* Sample2D::CreateEnemy()
     return node;
 }
 
-Node* Sample2D::CreateOrc()
-{
+Node* Sample2D::CreateOrc() {
     auto* cache = GetSubsystem<ResourceCache>();
     Node* node = scene_->CreateChild("Orc");
     node->SetScale(scene_->GetChild("Imp", true)->GetScale());
@@ -228,10 +218,9 @@ Node* Sample2D::CreateOrc()
     return node;
 }
 
-Node* Sample2D::CreateCoin()
-{
+Node* Sample2D::CreatePepsi() {
     auto* cache = GetSubsystem<ResourceCache>();
-    Node* node = scene_->CreateChild("Coin");
+    Node* node = scene_->CreateChild("Pepsi");
     node->SetScale(0.5);
     auto* animatedSprite = node->CreateComponent<AnimatedSprite2D>();
     auto* animationSet = cache->GetResource<AnimationSet2D>("Urho2D/PepsiIconRotate.scml");
@@ -247,8 +236,7 @@ Node* Sample2D::CreateCoin()
     return node;
 }
 
-Node* Sample2D::CreateMovingPlatform()
-{
+Node* Sample2D::CreateMovingPlatform() {
     auto* cache = GetSubsystem<ResourceCache>();
     Node* node = scene_->CreateChild("MovingPlatform");
     node->SetScale(Vector3(3.0f, 1.0f, 0.0f));
@@ -262,8 +250,7 @@ Node* Sample2D::CreateMovingPlatform()
     return node;
 }
 
-void Sample2D::PopulateMovingEntities(TileMapLayer2D* movingEntitiesLayer)
-{
+void Sample2D::PopulateMovingEntities(TileMapLayer2D* movingEntitiesLayer) {
     // Create enemy (will be cloned at each placeholder)
     Node* enemyNode = CreateEnemy();
     Node* orcNode = CreateOrc();
@@ -311,46 +298,43 @@ void Sample2D::PopulateMovingEntities(TileMapLayer2D* movingEntitiesLayer)
     platformNode->Remove();
 }
 
-void Sample2D::PopulateCoins(TileMapLayer2D* coinsLayer)
-{
-    // Create coin (will be cloned at each placeholder)
-    Node* coinNode = CreateCoin();
+void Sample2D::PopulatePepsis(TileMapLayer2D* pepsisLayer) {
+    // Create pepsis (will be cloned at each placeholder)
+    Node* pepsiNode = CreatePepsi();
 
-    // Instantiate coins to pick at each placeholder
-    for (int i=0; i < coinsLayer->GetNumObjects(); ++i)
+    // Instantiate pepsis to pick at each placeholder
+    for (int i=0; i < pepsisLayer->GetNumObjects(); ++i)
     {
-        TileMapObject2D* coinObject = coinsLayer->GetObject(i); // Get placeholder object
-        Node* coinClone = coinNode->Clone();
-        coinClone->SetPosition2D(coinObject->GetPosition() + coinObject->GetSize() / 2 + Vector2(0.0f, 0.16f));
+        TileMapObject2D* pepsiObject = pepsisLayer->GetObject(i); // Get placeholder object
+        Node* pepsiClone = pepsiNode->Clone();
+        pepsiClone->SetPosition2D(pepsiObject->GetPosition() + pepsiObject->GetSize() / 2 + Vector2(0.0f, 0.16f));
 
     }
 
     // Remove node used for cloning purpose
-    coinNode->Remove();
+    pepsiNode->Remove();
 }
 
-void Sample2D::PopulateTriggers(TileMapLayer2D* triggersLayer)
-{
-    // Create trigger node (will be cloned at each placeholder)
-    Node* triggerNode = CreateTrigger();
+//void Sample2D::PopulateTriggers(TileMapLayer2D* triggersLayer) {
+//    // Create trigger node (will be cloned at each placeholder)
+//    Node* triggerNode = CreateTrigger();
+//
+//    // Instantiate triggers at each placeholder (Rectangle objects)
+//    for (int i=0; i < triggersLayer->GetNumObjects(); ++i)
+//    {
+//        TileMapObject2D* triggerObject = triggersLayer->GetObject(i); // Get placeholder object
+//        if (triggerObject->GetObjectType() == OT_RECTANGLE)
+//        {
+//            Node* triggerClone = triggerNode->Clone();
+//            triggerClone->SetName(triggerObject->GetType());
+//            auto* shape = triggerClone->GetComponent<CollisionBox2D>();
+//            shape->SetSize(triggerObject->GetSize());
+//            triggerClone->SetPosition2D(triggerObject->GetPosition() + triggerObject->GetSize() / 2);
+//        }
+//    }
+//}
 
-    // Instantiate triggers at each placeholder (Rectangle objects)
-    for (int i=0; i < triggersLayer->GetNumObjects(); ++i)
-    {
-        TileMapObject2D* triggerObject = triggersLayer->GetObject(i); // Get placeholder object
-        if (triggerObject->GetObjectType() == OT_RECTANGLE)
-        {
-            Node* triggerClone = triggerNode->Clone();
-            triggerClone->SetName(triggerObject->GetType());
-            auto* shape = triggerClone->GetComponent<CollisionBox2D>();
-            shape->SetSize(triggerObject->GetSize());
-            triggerClone->SetPosition2D(triggerObject->GetPosition() + triggerObject->GetSize() / 2);
-        }
-    }
-}
-
-float Sample2D::Zoom(Camera* camera)
-{
+float Sample2D::Zoom(Camera* camera) {
     auto* input = GetSubsystem<Input>();
     float zoom_ = camera->GetZoom();
 
@@ -375,16 +359,14 @@ float Sample2D::Zoom(Camera* camera)
     return zoom_;
 }
 
-PODVector<Vector2> Sample2D::CreatePathFromPoints(TileMapObject2D* object, Vector2 offset)
-{
+PODVector<Vector2> Sample2D::CreatePathFromPoints(TileMapObject2D* object, Vector2 offset) {
     PODVector<Vector2> path;
     for (int i=0; i < object->GetNumPoints(); ++i)
         path.Push(object->GetPoint(i) + offset);
     return path;
 }
 
-void Sample2D::CreateUIContent(const String& demoTitle, int remainingLifes, int remainingCoins)
-{
+void Sample2D::CreateUIContent(const String& demoTitle, int remainingLifes, int remainingPepsis) {
     auto* cache = GetSubsystem<ResourceCache>();
     auto* ui = GetSubsystem<UI>();
 
@@ -392,22 +374,24 @@ void Sample2D::CreateUIContent(const String& demoTitle, int remainingLifes, int 
     ui->GetRoot()->SetDefaultStyle(cache->GetResource<XMLFile>("UI/DefaultStyle.xml"));
     auto* font = cache->GetResource<Font>("Fonts/Anonymous Pro.ttf");
 
-    // We create in-game UIs (coins and lifes) first so that they are hidden by the fullscreen UI (we could also temporary hide them using SetVisible)
+    // We create in-game UIs (pepsis and lifes) first so that they are hidden by the fullscreen UI (we could also temporary hide them using SetVisible)
 
-    // Create the UI for displaying the remaining coins
-    auto* coinsUI = ui->GetRoot()->CreateChild<BorderImage>("Coins");
-    coinsUI->SetTexture(cache->GetResource<Texture2D>("Urho2D/PepsiIcon/pepsi_logo.png"));
-    coinsUI->SetSize(60, 100);
+    // Create the UI for displaying the remaining pepsis
+    auto* pepsisUI = ui->GetRoot()->CreateChild<BorderImage>("Pepsis");
+    pepsisUI->SetTexture(cache->GetResource<Texture2D>("Urho2D/PepsiIcon/pepsi_logo.png"));
+    pepsisUI->SetSize(60, 100);
+
     //Don't need this line, it makes us only use part of the image.
-    //coinsUI->SetImageRect(IntRect(0, 64, 60, 128));
-    coinsUI->SetAlignment(HA_LEFT, VA_TOP);
-    coinsUI->SetPosition(5, 5);
-    auto* coinsText = coinsUI->CreateChild<Text>("CoinsText");
-    coinsText->SetAlignment(HA_CENTER, VA_CENTER);
-    coinsText->SetFont(font, 24);
-    coinsText->SetTextEffect(TE_SHADOW);
-    coinsText->SetText(String(remainingCoins));
-    coinsText->SetColor(Color(1.0,0.0,0.0));
+    //pepsisUI->SetImageRect(IntRect(0, 64, 60, 128));
+
+    pepsisUI->SetAlignment(HA_LEFT, VA_TOP);
+    pepsisUI->SetPosition(5, 5);
+    auto* pepsisText = pepsisUI->CreateChild<Text>("CoinsText");
+    pepsisText->SetAlignment(HA_CENTER, VA_CENTER);
+    pepsisText->SetFont(font, 24);
+    pepsisText->SetTextEffect(TE_SHADOW);
+    pepsisText->SetText(String(remainingPepsis));
+    pepsisText->SetColor(Color(1.0,0.0,0.0));
 
     // Create the UI for displaying the remaining lifes
     auto* lifeUI = ui->GetRoot()->CreateChild<BorderImage>("Life");
@@ -487,14 +471,12 @@ void Sample2D::CreateUIContent(const String& demoTitle, int remainingLifes, int 
     input->SetMouseVisible(true);
 }
 
-void Sample2D::HandleExitButton(StringHash eventType, VariantMap& eventData)
-{
+void Sample2D::HandleExitButton(StringHash eventType, VariantMap& eventData) {
     auto* engine = GetSubsystem<Engine>();
     engine->Exit();
 }
 
-void Sample2D::SaveScene(bool initial)
-{
+void Sample2D::SaveScene(bool initial) {
     String filename = demoFilename_;
     if (!initial)
         filename += "InGame";
@@ -502,30 +484,28 @@ void Sample2D::SaveScene(bool initial)
     scene_->SaveXML(saveFile);
 }
 
-void Sample2D::CreateBackgroundSprite(TileMapInfo2D info, float scale, const String& texture, bool animate)
-{
-    auto* cache = GetSubsystem<ResourceCache>();
-    Node* node = scene_->CreateChild("Background");
-    node->SetPosition(Vector3(info.GetMapWidth(), info.GetMapHeight(), 0) / 2);
-    node->SetScale(scale);
-    auto* sprite = node->CreateComponent<StaticSprite2D>();
-    sprite->SetSprite(cache->GetResource<Sprite2D>(texture));
-    SetRandomSeed(Time::GetSystemTime()); // Randomize from system clock
-    sprite->SetColor(Color(Random(0.0f, 1.0f), Random(0.0f, 1.0f), Random(0.0f, 1.0f), 1.0f));
+//void Sample2D::CreateBackgroundSprite(TileMapInfo2D info, float scale, const String& texture, bool animate) {
+//    auto* cache = GetSubsystem<ResourceCache>();
+//    Node* node = scene_->CreateChild("Background");
+//    node->SetPosition(Vector3(info.GetMapWidth(), info.GetMapHeight(), 0) / 2);
+//    node->SetScale(scale);
+//    auto* sprite = node->CreateComponent<StaticSprite2D>();
+//    sprite->SetSprite(cache->GetResource<Sprite2D>(texture));
+//    SetRandomSeed(Time::GetSystemTime()); // Randomize from system clock
+//    sprite->SetColor(Color(Random(0.0f, 1.0f), Random(0.0f, 1.0f), Random(0.0f, 1.0f), 1.0f));
+//
+//    // Create rotation animation
+//    if (animate)
+//    {
+//        SharedPtr<ValueAnimation> animation(new ValueAnimation(context_));
+//        animation->SetKeyFrame(0, Variant(Quaternion(0.0f, 0.0f, 0.0f)));
+//        animation->SetKeyFrame(1, Variant(Quaternion(0.0f, 0.0f, 180.0f)));
+//        animation->SetKeyFrame(2, Variant(Quaternion(0.0f, 0.0f, 0.0f)));
+//        node->SetAttributeAnimation("Rotation", animation, WM_LOOP, 0.05f);
+//    }
+//}
 
-    // Create rotation animation
-    if (animate)
-    {
-        SharedPtr<ValueAnimation> animation(new ValueAnimation(context_));
-        animation->SetKeyFrame(0, Variant(Quaternion(0.0f, 0.0f, 0.0f)));
-        animation->SetKeyFrame(1, Variant(Quaternion(0.0f, 0.0f, 180.0f)));
-        animation->SetKeyFrame(2, Variant(Quaternion(0.0f, 0.0f, 0.0f)));
-        node->SetAttributeAnimation("Rotation", animation, WM_LOOP, 0.05f);
-    }
-}
-
-void Sample2D::SpawnEffect(Node* node)
-{
+void Sample2D::SpawnEffect(Node* node) {
     auto* cache = GetSubsystem<ResourceCache>();
     Node* particleNode = node->CreateChild("Emitter");
     particleNode->SetScale(0.5 / node->GetScale().x_);
@@ -534,8 +514,7 @@ void Sample2D::SpawnEffect(Node* node)
     particleEmitter->SetEffect(cache->GetResource<ParticleEffect2D>("Urho2D/sun.pex"));
 }
 
-void Sample2D::PlaySoundEffect(const String& soundName)
-{
+void Sample2D::PlaySoundEffect(const String& soundName) {
     auto* cache = GetSubsystem<ResourceCache>();
     auto* source = scene_->CreateComponent<SoundSource>();
     auto* sound = cache->GetResource<Sound>("Sounds/" + soundName);
