@@ -73,7 +73,7 @@ protected:
     /// Initialize mouse mode on non-web platform.
     void InitMouseMode(MouseMode mode);
     /// Control logo visibility.
-    void SetLogoVisible(bool enable);
+//    void SetLogoVisible(bool enable);
 
     /// Logo sprite.
     SharedPtr<Sprite> logoSprite_;

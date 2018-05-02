@@ -53,18 +53,25 @@ public:
 
     /// Flag when player is wounded.
     bool wounded_;
+
     /// Flag when player is dead.
     bool killed_;
+
     /// Timer for particle emitter duration.
     float timer_;
-    /// Number of coins in the current level.
+
+    /// Number of pepsi's in the current level.
     int maxCoins_;
-    /// Counter for remaining coins to pick.
+
+    /// Counter for remaining pepsi's to pick.
     int remainingCoins_;
-    /// Counter for remaining lifes.
+
+    /// Counter for remaining pepsi's.
     int remainingLifes_;
+
     /// Scaling factor based on tiles' aspect ratio (definitively set at tile map creation).
     float moveSpeedScale_;
+
     /// Camera's zoom (used to scale movement speed based on camera zoom).
     float zoom_;
 };

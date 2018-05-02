@@ -79,9 +79,6 @@ void Sample::Start()
         // On desktop platform, do not detect touch when we already got a joystick
         SubscribeToEvent(E_TOUCHBEGIN, URHO3D_HANDLER(Sample, HandleTouchBegin));
 
-    // Create logo
-    CreateLogo();
-
     // Set custom window Title & Icon
     SetWindowTitleAndIcon();
 
@@ -147,54 +144,17 @@ void Sample::InitMouseMode(MouseMode mode)
     }
 }
 
-void Sample::SetLogoVisible(bool enable)
-{
-    if (logoSprite_)
-        logoSprite_->SetVisible(enable);
-}
-
-void Sample::CreateLogo()
-{
-    // Get logo texture
-    ResourceCache* cache = GetSubsystem<ResourceCache>();
-    Texture2D* logoTexture = cache->GetResource<Texture2D>("Textures/FishBoneLogo.png");
-    if (!logoTexture)
-        return;
-
-    // Create logo sprite and add to the UI layout
-    UI* ui = GetSubsystem<UI>();
-    logoSprite_ = ui->GetRoot()->CreateChild<Sprite>();
-
-    // Set logo sprite texture
-    logoSprite_->SetTexture(logoTexture);
-
-    int textureWidth = logoTexture->GetWidth();
-    int textureHeight = logoTexture->GetHeight();
-
-    // Set logo sprite scale
-    logoSprite_->SetScale(256.0f / textureWidth);
-
-    // Set logo sprite size
-    logoSprite_->SetSize(textureWidth, textureHeight);
-
-    // Set logo sprite hot spot
-    logoSprite_->SetHotSpot(textureWidth, textureHeight);
-
-    // Set logo sprite alignment
-    logoSprite_->SetAlignment(HA_RIGHT, VA_BOTTOM);
-
-    // Make logo not fully opaque to show the scene underneath
-    logoSprite_->SetOpacity(0.9f);
-
-    // Set a low priority for the logo so that other UI elements can be drawn on top
-    logoSprite_->SetPriority(-100);
-}
+//void Sample::SetLogoVisible(bool enable)
+//{
+//    if (logoSprite_)
+//        logoSprite_->SetVisible(enable);
+//}
 
 void Sample::SetWindowTitleAndIcon()
 {
     ResourceCache* cache = GetSubsystem<ResourceCache>();
     Graphics* graphics = GetSubsystem<Graphics>();
-    Image* icon = cache->GetResource<Image>("Textures/UrhoIcon.png");
+    Image* icon = cache->GetResource<Image>("Textures/icon.png");
     graphics->SetWindowIcon(icon);
     graphics->SetWindowTitle("CokeVsPepsiBoy");
 }

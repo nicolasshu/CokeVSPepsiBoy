@@ -47,12 +47,9 @@ Character2D::Character2D(Context* context) :
     remainingLifes_(3),
     moveSpeedScale_(1.0f),
     zoom_(0.0f)
+{}
 
-{
-}
-
-void Character2D::RegisterObject(Context* context)
-{
+void Character2D::RegisterObject(Context* context) {
     context->RegisterFactory<Character2D>();
 
     // These macros register the class attributes to the Context for automatic load / save handling.
@@ -60,18 +57,14 @@ void Character2D::RegisterObject(Context* context)
     URHO3D_ATTRIBUTE("Move Speed Scale", float, moveSpeedScale_, 1.0f, AM_DEFAULT);
     URHO3D_ATTRIBUTE("Camera Zoom", float, zoom_, 0.0f, AM_DEFAULT);
     URHO3D_ATTRIBUTE("Coins In Level", int, maxCoins_, 0, AM_DEFAULT);
-    URHO3D_ATTRIBUTE("Remaining Coins", int, remainingCoins_, 0, AM_DEFAULT);
+    URHO3D_ATTRIBUTE("Remaining Pepsi's", int, remainingCoins_, 0, AM_DEFAULT);
     URHO3D_ATTRIBUTE("Remaining Lifes", int, remainingLifes_, 3, AM_DEFAULT);
 }
 
-void Character2D::Update(float timeStep)
-{
+void Character2D::Update(float timeStep) {
     // Handle wounded/killed states
     if (killed_)
         return;
-
-    // Print timeStep
-    // std::cout << "timeStep: " << timeStep << std::endl;
 
     if (wounded_)
     {
@@ -110,12 +103,6 @@ void Character2D::Update(float timeStep)
     if (!moveDir.Equals(Vector3::ZERO))
         node_->Translate(moveDir * timeStep);
 
-    // Animate
-//    if (input->GetKeyDown(KEY_SPACE))
-//    {
-//        if (animatedSprite->GetAnimation() != "attack")
-//            animatedSprite->SetAnimation("attack", LM_FORCE_LOOPED);
-//    }
     if (!moveDir.Equals(Vector3::ZERO))
     {
         if (animatedSprite->GetAnimation() != "run")
@@ -127,14 +114,8 @@ void Character2D::Update(float timeStep)
     }
 }
 
-void Character2D::HandleWoundedState(float timeStep)
-{
+void Character2D::HandleWoundedState(float timeStep) {
     auto* body = GetComponent<RigidBody2D>();
-    auto* animatedSprite = GetComponent<AnimatedSprite2D>();
-
-    // Play "hit" animation in loop
-    if (animatedSprite->GetAnimation() != "hit")
-        animatedSprite->SetAnimation("hit", LM_FORCE_LOOPED);
 
     // Update timer
     timer_ += timeStep;
@@ -176,9 +157,7 @@ void Character2D::HandleWoundedState(float timeStep)
     }
 }
 
-void Character2D::HandleDeath()
-{
-    auto* body = GetComponent<RigidBody2D>();
+void Character2D::HandleDeath() {
     auto* animatedSprite = GetComponent<AnimatedSprite2D>();
 
     // Set state to 'killed'
