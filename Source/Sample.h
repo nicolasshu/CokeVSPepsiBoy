@@ -92,7 +92,7 @@ protected:
 
 private:
     /// Create logo.
-    void CreateLogo();
+//    void CreateLogo();
     /// Set custom window Title & Icon
     void SetWindowTitleAndIcon();
     /// Create console and debug HUD.

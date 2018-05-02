@@ -43,7 +43,7 @@ const float CAMERA_MAX_DIST = 6.0f;
 /// Convenient functions for Urho2D samples:
 ///    - Generate collision shapes from a tmx file objects
 ///    - Create Spriter Imp character
-///    - Create enemies, coins and platforms to tile map placeholders
+///    - Create enemies, pepsis and platforms to tile map placeholders
 ///    - Handle camera zoom using PageUp, PageDown and MouseWheel
 ///    - Create UI instructions
 ///    - Create a particle emitter attached to a given node

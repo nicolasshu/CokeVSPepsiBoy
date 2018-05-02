@@ -23,7 +23,7 @@
 #pragma once
 
 #include "Sample.h"
-#include "Sample2D.h"
+#include "Object2D.h"
 
 class Character2D;
 class Sample2D;
@@ -46,35 +46,47 @@ public:
 
     /// Setup after engine initialization and before running the main loop.
     void Start() override;
+
     /// Setup before engine initialization. Modifies the engine parameters.
     void Setup() override;
 
 private:
     /// Construct the scene content.
     void CreateScene();
+
     /// Construct an instruction text to the UI.
     void CreateInstructions();
+
     /// Subscribe to application-wide logic update events.
     void SubscribeToEvents();
+
     /// Handle the logic update event.
     void HandleUpdate(StringHash eventType, VariantMap& eventData);
+
     /// Handle the logic post update event.
     void HandlePostUpdate(StringHash eventType, VariantMap& eventData);
+
     /// Handle the post render update event.
     void HandlePostRenderUpdate(StringHash eventType, VariantMap& eventData);
+
     /// Handle the end rendering event.
     void HandleSceneRendered(StringHash eventType, VariantMap& eventData);
+
     /// Handle reloading the scene.
     void ReloadScene(bool reInit);
+
     /// Handle the contact begin event (Box2D contact listener).
     void HandleCollisionBegin(StringHash eventType, VariantMap& eventData);
+
     /// Handle 'PLAY' button released event.
     void HandlePlayButton(StringHash eventType, VariantMap& eventData);
 
     /// The controllable character component.
     WeakPtr<Character2D> character2D_;
+
     /// Camera's zoom (used to scale movement speed based on camera zoom).
     float zoom_;
+
     /// Flag for drawing debug geometry.
     bool drawDebug_;
 

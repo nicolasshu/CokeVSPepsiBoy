@@ -42,8 +42,8 @@ Character2D::Character2D(Context* context) :
     wounded_(false),
     killed_(false),
     timer_(0.0f),
-    maxCoins_(0),
-    remainingCoins_(0),
+    maxPepsis_(0),
+    remainingPepsis_(0),
     remainingLifes_(3),
     moveSpeedScale_(1.0f),
     zoom_(0.0f)
@@ -56,8 +56,8 @@ void Character2D::RegisterObject(Context* context) {
     // We specify the 'Default' attribute mode which means it will be used both for saving into file, and network replication.
     URHO3D_ATTRIBUTE("Move Speed Scale", float, moveSpeedScale_, 1.0f, AM_DEFAULT);
     URHO3D_ATTRIBUTE("Camera Zoom", float, zoom_, 0.0f, AM_DEFAULT);
-    URHO3D_ATTRIBUTE("Coins In Level", int, maxCoins_, 0, AM_DEFAULT);
-    URHO3D_ATTRIBUTE("Remaining Pepsi's", int, remainingCoins_, 0, AM_DEFAULT);
+    URHO3D_ATTRIBUTE("Pepsis In Level", int, maxPepsis_, 0, AM_DEFAULT);
+    URHO3D_ATTRIBUTE("Remaining Pepsi's", int, remainingPepsis_, 0, AM_DEFAULT);
     URHO3D_ATTRIBUTE("Remaining Lifes", int, remainingLifes_, 3, AM_DEFAULT);
 }
 

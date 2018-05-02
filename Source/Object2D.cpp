@@ -55,7 +55,7 @@
 #include <Urho3D/UI/Window.h>
 
 #include "Mover.h"
-#include "Sample2D.h"
+#include "Object2D.h"
 
 
 Sample2D::Sample2D(Context* context) :

@@ -56,9 +56,9 @@
 #include <zconf.h>
 
 #include "Character2D.h"
-#include "Sample2D.h"
+#include "Object2D.h"
 #include "Mover.h"
-#include "Urho2DIsometricDemo.h"
+#include "CokeVSPepsiBoy.h"
 
 Urho2DIsometricDemo::Urho2DIsometricDemo(Context* context) :
     Sample(context),
@@ -91,7 +91,7 @@ void Urho2DIsometricDemo::Start()
     CreateScene();
 
     // Create the UI content
-    sample2D_->CreateUIContent("CokeVsPepsi", character2D_->remainingLifes_, character2D_->remainingCoins_);
+    sample2D_->CreateUIContent("CokeVsPepsi", character2D_->remainingLifes_, character2D_->remainingPepsis_);
     auto* ui = GetSubsystem<UI>();
     Button* playButton = static_cast<Button*>(ui->GetRoot()->GetChild("PlayButton", true));
     SubscribeToEvent(playButton, E_RELEASED, URHO3D_HANDLER(Urho2DIsometricDemo, HandlePlayButton));
@@ -155,8 +155,8 @@ void Urho2DIsometricDemo::CreateScene()
     sample2D_->PopulateCoins(coinsLayer);
 
     // Init coins counters
-    character2D_->remainingCoins_ = coinsLayer->GetNumObjects();
-    character2D_->maxCoins_ = coinsLayer->GetNumObjects();
+    character2D_->remainingPepsis_ = coinsLayer->GetNumObjects();
+    character2D_->maxPepsis_ = coinsLayer->GetNumObjects();
 
     // Check when scene is rendered
     SubscribeToEvent(E_ENDRENDERING, URHO3D_HANDLER(Urho2DIsometricDemo, HandleSceneRendered));
@@ -175,16 +175,16 @@ void Urho2DIsometricDemo::HandleCollisionBegin(StringHash eventType, VariantMap&
     if (nodeName == "Coin")
     {
         hitNode->Remove();
-        character2D_->remainingCoins_ -= 1;
+        character2D_->remainingPepsis_ -= 1;
         auto* ui = GetSubsystem<UI>();
-        if (character2D_->remainingCoins_ == 0)
+        if (character2D_->remainingPepsis_ == 0)
         {
             Text* instructions = static_cast<Text*>(ui->GetRoot()->GetChild("Instructions", true));
             instructions->SetText("You have all the Pepsi. Drink it all !!!");
             sample2D_->PlaySoundEffect("Winning.wav");
         }
         Text* coinsText = static_cast<Text*>(ui->GetRoot()->GetChild("CoinsText", true));
-        coinsText->SetText(String(character2D_->remainingCoins_)); // Update coins UI counter
+        coinsText->SetText(String(character2D_->remainingPepsis_)); // Update coins UI counter
         sample2D_->PlaySoundEffect("OpeningSoda.wav");
     }
 
@@ -356,11 +356,11 @@ void Urho2DIsometricDemo::ReloadScene(bool reInit)
 
     // Set what number to use depending whether reload is requested from 'PLAY' button (reInit=true) or 'F7' key (reInit=false)
     int lifes = character2D_->remainingLifes_;
-    int coins = character2D_->remainingCoins_;
+    int coins = character2D_->remainingPepsis_;
     if (reInit)
     {
         lifes = LIFES;
-        coins = character2D_->maxCoins_;
+        coins = character2D_->maxPepsis_;
     }
 
     // Update lifes UI
@@ -368,7 +368,7 @@ void Urho2DIsometricDemo::ReloadScene(bool reInit)
     Text* lifeText = static_cast<Text*>(ui->GetRoot()->GetChild("LifeText", true));
     lifeText->SetText(String(lifes));
 
-    // Update coins UI
+    // Update pepsis UI
     Text* coinsText = static_cast<Text*>(ui->GetRoot()->GetChild("CoinsText", true));
     coinsText->SetText(String(coins));
 }

@@ -61,10 +61,10 @@ public:
     float timer_;
 
     /// Number of pepsi's in the current level.
-    int maxCoins_;
+    int maxPepsis_;
 
     /// Counter for remaining pepsi's to pick.
-    int remainingCoins_;
+    int remainingPepsis_;
 
     /// Counter for remaining pepsi's.
     int remainingLifes_;
