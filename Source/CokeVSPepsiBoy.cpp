@@ -162,8 +162,8 @@ void Urho2DIsometricDemo::CreateScene()
     SubscribeToEvent(E_ENDRENDERING, URHO3D_HANDLER(Urho2DIsometricDemo, HandleSceneRendered));
 }
 
-void Urho2DIsometricDemo::HandleCollisionBegin(StringHash eventType, VariantMap& eventData)
-{
+void Urho2DIsometricDemo::HandleCollisionBegin(StringHash eventType, VariantMap& eventData) {
+
     // Get colliding node
     auto* hitNode = static_cast<Node*>(eventData[PhysicsBeginContact2D::P_NODEA].GetPtr());
     if (hitNode->GetName() == "Imp")
@@ -172,13 +172,12 @@ void Urho2DIsometricDemo::HandleCollisionBegin(StringHash eventType, VariantMap&
     Node* character2DNode = scene_->GetChild("Imp", true);
 
     // Handle Pepsis picking
-    if (nodeName == "Pepsi")
-    {
+    if (nodeName == "Pepsi") {
+
         hitNode->Remove();
         character2D_->remainingPepsis_ -= 1;
         auto* ui = GetSubsystem<UI>();
-        if (character2D_->remainingPepsis_ == 0)
-        {
+        if (character2D_->remainingPepsis_ == 0) {
             Text* instructions = static_cast<Text*>(ui->GetRoot()->GetChild("Instructions", true));
             instructions->SetText("You have all the Pepsi. Drink it all !!!");
             static_cast<Text*>(ui->GetRoot()->GetChild("ExitButton", true))->SetVisible(true);
@@ -187,52 +186,34 @@ void Urho2DIsometricDemo::HandleCollisionBegin(StringHash eventType, VariantMap&
 
             sample2D_->PlaySoundEffect("Winning.wav");
         }
-        Text* pepsisText = static_cast<Text*>(ui->GetRoot()->GetChild("CoinsText", true));
-        pepsisText->SetText(String(character2D_->remainingPepsis_)); // Update pepsis UI counter
+        Text* pepsiText = static_cast<Text*>(ui->GetRoot()->GetChild("PepsiText", true));
+        pepsiText->SetText(String(character2D_->remainingPepsis_)); // Update pepsis UI counter
         sample2D_->PlaySoundEffect("OpeningSoda.wav");
     }
 
     // Handle interactions with enemies
-    if (nodeName == "Orc")
-    {
+    if (nodeName == "Orc") {
+
         auto* animatedSprite = character2DNode->GetComponent<AnimatedSprite2D>();
         float deltaX = character2DNode->GetPosition().x_ - hitNode->GetPosition().x_;
 
-//        // Orc killed if character is fighting in its direction when the contact occurs
-//        if (animatedSprite->GetAnimation() == "attack" && (deltaX < 0 == animatedSprite->GetFlipX()))
-//        {
-//            static_cast<Mover*>(hitNode->GetComponent<Mover>())->emitTime_ = 1;
-//            if (!hitNode->GetChild("Emitter", true))
-//            {
-//                hitNode->GetComponent("RigidBody2D")->Remove(); // Remove Orc's body
-//                sample2D_->SpawnEffect(hitNode);
-//                sample2D_->PlaySoundEffect("BigExplosion.wav");
-//            }
-//        }
-        // Player killed if not fighting in the direction of the Orc when the contact occurs
-//        else
-//        {
-            if (!character2DNode->GetChild("Emitter", true))
-            {
+            if (!character2DNode->GetChild("Emitter", true)) {
+
                 character2D_->wounded_ = true;
-                if (nodeName == "Orc")
-                {
-                    auto* orc = static_cast<Mover*>(hitNode->GetComponent<Mover>());
-                    orc->fightTimer_ = 1;
+                if (nodeName == "Orc") {
+                    auto* brian = static_cast<Mover*>(hitNode->GetComponent<Mover>());
+                    brian->fightTimer_ = 1;
                 }
                 sample2D_->SpawnEffect(character2DNode);
                 sample2D_->PlaySoundEffect("BigExplosion.wav");
             }
-//        }
-
-
     }
 
 
 }
 
-void Urho2DIsometricDemo::HandleSceneRendered(StringHash eventType, VariantMap& eventData)
-{
+void Urho2DIsometricDemo::HandleSceneRendered(StringHash eventType, VariantMap& eventData) {
+
     UnsubscribeFromEvent(E_ENDRENDERING);
     // Save the scene so we can reload it later
     sample2D_->SaveScene(true);
@@ -240,8 +221,8 @@ void Urho2DIsometricDemo::HandleSceneRendered(StringHash eventType, VariantMap& 
     scene_->SetUpdateEnabled(false);
 }
 
-void Urho2DIsometricDemo::SubscribeToEvents()
-{
+void Urho2DIsometricDemo::SubscribeToEvents() {
+
     // Subscribe HandleUpdate() function for processing update events
     SubscribeToEvent(E_UPDATE, URHO3D_HANDLER(Urho2DIsometricDemo, HandleUpdate));
 
@@ -259,8 +240,8 @@ void Urho2DIsometricDemo::SubscribeToEvents()
 
 }
 
-void Urho2DIsometricDemo::HandleUpdate(StringHash eventType, VariantMap& eventData)
-{
+void Urho2DIsometricDemo::HandleUpdate(StringHash eventType, VariantMap& eventData) {
+
     using namespace Update;
 
     // Zoom in/out
@@ -281,8 +262,8 @@ void Urho2DIsometricDemo::HandleUpdate(StringHash eventType, VariantMap& eventDa
         ReloadScene(false);
 }
 
-void Urho2DIsometricDemo::HandlePostUpdate(StringHash eventType, VariantMap& eventData)
-{
+void Urho2DIsometricDemo::HandlePostUpdate(StringHash eventType, VariantMap& eventData) {
+
     if (!character2D_)
         return;
 
@@ -294,15 +275,11 @@ void Urho2DIsometricDemo::HandlePostUpdate(StringHash eventType, VariantMap& eve
     float speedX = Clamp(MOVE_SPEED_X / zoom_, 0.4f, 1.0f);
     float speedY = speedX;
 
-    if (input->GetKeyDown('A') )
-    {
+    if (input->GetKeyDown('A') ) {
         moveDir = moveDir + Vector3::LEFT * speedX;
-
     }
-    if (input->GetKeyDown('D') )
-    {
+    if (input->GetKeyDown('D') ) {
         moveDir = moveDir + Vector3::RIGHT * speedX;
-
     }
 
     if (!moveDir.Equals(Vector3::ZERO))
@@ -310,6 +287,7 @@ void Urho2DIsometricDemo::HandlePostUpdate(StringHash eventType, VariantMap& eve
 
     if (input->GetKeyDown('W') )
         moveDir = moveDir + Vector3::UP * speedY;
+
     if (input->GetKeyDown('S') )
         moveDir = moveDir + Vector3::DOWN * speedY;
 
@@ -331,10 +309,9 @@ void Urho2DIsometricDemo::HandlePostUpdate(StringHash eventType, VariantMap& eve
     // std::cout << "Camera: (" << cameraNode_->GetPosition().x_ << ',' << cameraNode_->GetPosition().y_ << ',' << cameraNode_->GetPosition().z_ << ")" << std::endl;
 }
 
-void Urho2DIsometricDemo::HandlePostRenderUpdate(StringHash eventType, VariantMap& eventData)
-{
-    if (drawDebug_)
-    {
+void Urho2DIsometricDemo::HandlePostRenderUpdate(StringHash eventType, VariantMap& eventData) {
+
+    if (drawDebug_) {
         auto* physicsWorld = scene_->GetComponent<PhysicsWorld2D>();
         physicsWorld->DrawDebugGeometry();
 
@@ -344,8 +321,8 @@ void Urho2DIsometricDemo::HandlePostRenderUpdate(StringHash eventType, VariantMa
     }
 }
 
-void Urho2DIsometricDemo::ReloadScene(bool reInit)
-{
+void Urho2DIsometricDemo::ReloadScene(bool reInit) {
+
     String filename = sample2D_->demoFilename_;
     if (!reInit)
         filename += "InGame";
@@ -361,8 +338,7 @@ void Urho2DIsometricDemo::ReloadScene(bool reInit)
     // Set what number to use depending whether reload is requested from 'PLAY' button (reInit=true) or 'F7' key (reInit=false)
     int lifes = character2D_->remainingLifes_;
     int pepsis = character2D_->remainingPepsis_;
-    if (reInit)
-    {
+    if (reInit) {
         lifes = LIFES;
         pepsis = character2D_->maxPepsis_;
     }
@@ -373,16 +349,15 @@ void Urho2DIsometricDemo::ReloadScene(bool reInit)
     lifeText->SetText(String(lifes));
 
     // Update pepsis UI
-    Text* coinsText = static_cast<Text*>(ui->GetRoot()->GetChild("CoinsText", true));
-    coinsText->SetText(String(pepsis));
+    Text* pepsiText = static_cast<Text*>(ui->GetRoot()->GetChild("PepsiText", true));
+    pepsiText->SetText(String(pepsis));
 }
 
-void Urho2DIsometricDemo::HandlePlayButton(StringHash eventType, VariantMap& eventData)
-{
+void Urho2DIsometricDemo::HandlePlayButton(StringHash eventType, VariantMap& eventData) {
+
     // Remove fullscreen UI and unfreeze the scene
     auto* ui = GetSubsystem<UI>();
-    if (static_cast<Text*>(ui->GetRoot()->GetChild("FullUI", true)))
-    {
+    if (static_cast<Text*>(ui->GetRoot()->GetChild("FullUI", true))) {
         ui->GetRoot()->GetChild("FullUI", true)->Remove();
         scene_->SetUpdateEnabled(true);
     }

@@ -169,7 +169,7 @@ Node* Sample2D::CreateCharacter(TileMapInfo2D info, float friction, Vector3 posi
     auto* animationSet = cache->GetResource<AnimationSet2D>("Urho2D/man/man.scml");
     animatedSprite->SetAnimationSet(animationSet);
     animatedSprite->SetAnimation("idle");
-    animatedSprite->SetLayer(3); // Put character over tile map (which is on layer 0) and over Orcs (which are on layer 2)
+    animatedSprite->SetLayer(3); // Put character over tile map (which is on layer 0) and over Brians (which are on layer 2)
     auto* impBody = spriteNode->CreateComponent<RigidBody2D>();
     impBody->SetBodyType(BT_DYNAMIC);
     impBody->SetAllowSleep(false);
@@ -202,7 +202,7 @@ Node* Sample2D::CreateEnemy() {
     return node;
 }
 
-Node* Sample2D::CreateOrc() {
+Node* Sample2D::CreateBrian() {
     auto* cache = GetSubsystem<ResourceCache>();
     Node* node = scene_->CreateChild("Orc");
     node->SetScale(scene_->GetChild("Imp", true)->GetScale());
@@ -210,7 +210,7 @@ Node* Sample2D::CreateOrc() {
     auto* animationSet = cache->GetResource<AnimationSet2D>("Urho2D/Swenson/Swenson.scml");
     animatedSprite->SetAnimationSet(animationSet);
     animatedSprite->SetAnimation("run"); // Get scml file and Play "run" anim
-    animatedSprite->SetLayer(2); // Make orc always visible
+    animatedSprite->SetLayer(2); // Make brian always visible
     auto* body = node->CreateComponent<RigidBody2D>();
     auto* shape = node->CreateComponent<CollisionCircle2D>();
     shape->SetRadius(1.3f); // Set shape size
@@ -253,7 +253,7 @@ Node* Sample2D::CreateMovingPlatform() {
 void Sample2D::PopulateMovingEntities(TileMapLayer2D* movingEntitiesLayer) {
     // Create enemy (will be cloned at each placeholder)
     Node* enemyNode = CreateEnemy();
-    Node* orcNode = CreateOrc();
+    Node* brianNode = CreateBrian();
     Node* platformNode = CreateMovingPlatform();
 
     // Instantiate enemies and moving platforms at each placeholder (placeholders are Poly Line objects defining a path from points)
@@ -272,7 +272,7 @@ void Sample2D::PopulateMovingEntities(TileMapLayer2D* movingEntitiesLayer) {
                 offset = Vector2(0.0f, -0.32f);
             }
             else if (movingObject->GetType() == "Orc")
-                movingClone = orcNode->Clone();
+                movingClone = brianNode->Clone();
             else if (movingObject->GetType() == "MovingPlatform")
                 movingClone = platformNode->Clone();
             else
@@ -294,7 +294,7 @@ void Sample2D::PopulateMovingEntities(TileMapLayer2D* movingEntitiesLayer) {
 
     // Remove nodes used for cloning purpose
     enemyNode->Remove();
-    orcNode->Remove();
+    brianNode->Remove();
     platformNode->Remove();
 }
 
@@ -386,12 +386,12 @@ void Sample2D::CreateUIContent(const String& demoTitle, int remainingLifes, int 
 
     pepsisUI->SetAlignment(HA_LEFT, VA_TOP);
     pepsisUI->SetPosition(5, 5);
-    auto* pepsisText = pepsisUI->CreateChild<Text>("CoinsText");
-    pepsisText->SetAlignment(HA_CENTER, VA_CENTER);
-    pepsisText->SetFont(font, 24);
-    pepsisText->SetTextEffect(TE_SHADOW);
-    pepsisText->SetText(String(remainingPepsis));
-    pepsisText->SetColor(Color(1.0,0.0,0.0));
+    auto* pepsiText = pepsisUI->CreateChild<Text>("PepsiText");
+    pepsiText->SetAlignment(HA_CENTER, VA_CENTER);
+    pepsiText->SetFont(font, 24);
+    pepsiText->SetTextEffect(TE_SHADOW);
+    pepsiText->SetText(String(remainingPepsis));
+    pepsiText->SetColor(Color(1.0,0.0,0.0));
 
     // Create the UI for displaying the remaining lifes
     auto* lifeUI = ui->GetRoot()->CreateChild<BorderImage>("Life");

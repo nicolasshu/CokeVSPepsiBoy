@@ -85,7 +85,7 @@ public:
     Node* CreateEnemy();
 
     /// Create an Brian (will be cloned at each tmx placeholder).
-    Node* CreateOrc();
+    Node* CreateBrian();
 
     /// Create a pepsi (will be cloned at each tmx placeholder).
     Node* CreatePepsi();
