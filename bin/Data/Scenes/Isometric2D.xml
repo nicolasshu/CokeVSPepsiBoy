@@ -258,7 +258,7 @@
 		<component type="Character2D" id="1208">
 			<attribute name="Move Speed Scale" value="0.5" />
 			<attribute name="Camera Zoom" value="3.2" />
-			<attribute name="Coins In Level" value="11" />
+			<attribute name="Pepsis In Level" value="11" />
 			<attribute name="Remaining Pepsi's" value="11" />
 		</component>
 	</node>
@@ -479,7 +479,7 @@
 	</node>
 	<node id="1261">
 		<attribute name="Is Enabled" value="true" />
-		<attribute name="Name" value="Coin" />
+		<attribute name="Name" value="Pepsi" />
 		<attribute name="Tags" />
 		<attribute name="Position" value="-0.799999 13.6 0" />
 		<attribute name="Rotation" value="1 0 0 0" />
@@ -501,7 +501,7 @@
 	</node>
 	<node id="1262">
 		<attribute name="Is Enabled" value="true" />
-		<attribute name="Name" value="Coin" />
+		<attribute name="Name" value="Pepsi" />
 		<attribute name="Tags" />
 		<attribute name="Position" value="1.76 13.6 0" />
 		<attribute name="Rotation" value="1 0 0 0" />
@@ -523,7 +523,7 @@
 	</node>
 	<node id="1263">
 		<attribute name="Is Enabled" value="true" />
-		<attribute name="Name" value="Coin" />
+		<attribute name="Name" value="Pepsi" />
 		<attribute name="Tags" />
 		<attribute name="Position" value="0.8 11.2 0" />
 		<attribute name="Rotation" value="1 0 0 0" />
@@ -545,7 +545,7 @@
 	</node>
 	<node id="1264">
 		<attribute name="Is Enabled" value="true" />
-		<attribute name="Name" value="Coin" />
+		<attribute name="Name" value="Pepsi" />
 		<attribute name="Tags" />
 		<attribute name="Position" value="2.08 11.84 0" />
 		<attribute name="Rotation" value="1 0 0 0" />
@@ -567,7 +567,7 @@
 	</node>
 	<node id="1265">
 		<attribute name="Is Enabled" value="true" />
-		<attribute name="Name" value="Coin" />
+		<attribute name="Name" value="Pepsi" />
 		<attribute name="Tags" />
 		<attribute name="Position" value="4.96 15.84 0" />
 		<attribute name="Rotation" value="1 0 0 0" />
@@ -589,7 +589,7 @@
 	</node>
 	<node id="1266">
 		<attribute name="Is Enabled" value="true" />
-		<attribute name="Name" value="Coin" />
+		<attribute name="Name" value="Pepsi" />
 		<attribute name="Tags" />
 		<attribute name="Position" value="7.52 15.52 0" />
 		<attribute name="Rotation" value="1 0 0 0" />
@@ -611,7 +611,7 @@
 	</node>
 	<node id="1267">
 		<attribute name="Is Enabled" value="true" />
-		<attribute name="Name" value="Coin" />
+		<attribute name="Name" value="Pepsi" />
 		<attribute name="Tags" />
 		<attribute name="Position" value="8.16 14.88 0" />
 		<attribute name="Rotation" value="1 0 0 0" />
@@ -633,7 +633,7 @@
 	</node>
 	<node id="1268">
 		<attribute name="Is Enabled" value="true" />
-		<attribute name="Name" value="Coin" />
+		<attribute name="Name" value="Pepsi" />
 		<attribute name="Tags" />
 		<attribute name="Position" value="-6.88 8.32 0" />
 		<attribute name="Rotation" value="1 0 0 0" />
@@ -655,7 +655,7 @@
 	</node>
 	<node id="1269">
 		<attribute name="Is Enabled" value="true" />
-		<attribute name="Name" value="Coin" />
+		<attribute name="Name" value="Pepsi" />
 		<attribute name="Tags" />
 		<attribute name="Position" value="-7.2 10.72 0" />
 		<attribute name="Rotation" value="1 0 0 0" />
@@ -677,7 +677,7 @@
 	</node>
 	<node id="1270">
 		<attribute name="Is Enabled" value="true" />
-		<attribute name="Name" value="Coin" />
+		<attribute name="Name" value="Pepsi" />
 		<attribute name="Tags" />
 		<attribute name="Position" value="-8.48 8.8 0" />
 		<attribute name="Rotation" value="1 0 0 0" />
@@ -699,7 +699,7 @@
 	</node>
 	<node id="1271">
 		<attribute name="Is Enabled" value="true" />
-		<attribute name="Name" value="Coin" />
+		<attribute name="Name" value="Pepsi" />
 		<attribute name="Tags" />
 		<attribute name="Position" value="-3.68 8.64 0" />
 		<attribute name="Rotation" value="1 0 0 0" />
