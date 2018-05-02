@@ -11,6 +11,11 @@ set(ENV{URHO3D_HOME} "../Urho3D")
 include (UrhoCommon)
 # Define target name
 set (TARGET_NAME ${PROJECT_NAME})
+
+if("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
+    set(CMAKE_SHARED_LIBRARY_CREATE_CXX_FLAGS "${CMAKE_SHARED_LIBRARY_CREATE_CXX_FLAGS} -undefined dynamic_lookup")
+endif()
+
 # Define source files
 file(GLOB_RECURSE SOURCE_FILES "Source/*.*pp" "Source/*.h")
 
