@@ -471,7 +471,7 @@ void Sample2D::CreateUIContent(const String& demoTitle, int remainingLifes, int 
 
     // Create the instructions
     auto* instructionText = ui->GetRoot()->CreateChild<Text>("Instructions");
-    instructionText->SetText("WASD keys moves the camera \n Arrows to move Pepsi Boy \nPageUp/PageDown/MouseWheel zoom \nF5/F7 to save/reload scene\n'Z' to toggle debug geometry\nSpace to fight \n \n Goal: Run away from Brian Swenson \n and drink all the Pepsi ");
+    instructionText->SetText("WASD keys moves the camera \n Arrows to move Pepsi Boy \nPageUp/PageDown/MouseWheel zoom \n\n Goal: Run away from Brian Swenson \n and drink all the Pepsi ");
     instructionText->SetFont(cache->GetResource<Font>("Fonts/Anonymous Pro.ttf"), 15);
     instructionText->SetTextAlignment(HA_CENTER); // Center rows in relation to each other
     instructionText->SetAlignment(HA_CENTER, VA_CENTER);
