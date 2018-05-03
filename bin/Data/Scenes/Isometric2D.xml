@@ -5,8 +5,8 @@
 	<attribute name="Smoothing Constant" value="50" />
 	<attribute name="Snap Threshold" value="5" />
 	<attribute name="Elapsed Time" value="0" />
-	<attribute name="Next Replicated Node ID" value="1226" />
-	<attribute name="Next Replicated Component ID" value="1268" />
+	<attribute name="Next Replicated Node ID" value="1357" />
+	<attribute name="Next Replicated Component ID" value="1399" />
 	<attribute name="Next Local Node ID" value="16777222" />
 	<attribute name="Next Local Component ID" value="16777221" />
 	<attribute name="Variables" />
@@ -48,15 +48,15 @@
 		<component type="TileMap2D" id="5">
 			<attribute name="Tmx File" value="TmxFile2D;Urho2D/Tilesets/atrium.tmx" />
 		</component>
-		<component type="RigidBody2D" id="1189" />
-		<component type="CollisionChain2D" id="1190">
+		<component type="RigidBody2D" id="1320" />
+		<component type="CollisionChain2D" id="1321">
 			<attribute name="Category Bits" value="1" />
 			<attribute name="Mask Bits" value="65535" />
 			<attribute name="Friction" value="0.8" />
-			<attribute name="Vertices" value="123 20 206 192 10 215 211 64 194 245 72 65 194 245 128 65 82 184 238 64 41 92 149 65 215 163 56 193 82 184 18 65 123 20 206 192 10 215 211 64" />
+			<attribute name="Vertices" value="123 20 206 192 112 61 218 64 143 194 69 65 143 194 129 65 82 184 238 64 41 92 149 65 164 112 53 193 235 81 20 65 123 20 206 192 112 61 218 64" />
 		</component>
 	</node>
-	<node id="1202">
+	<node id="1333">
 		<attribute name="Is Enabled" value="true" />
 		<attribute name="Name" value="Imp" />
 		<attribute name="Tags" />
@@ -64,59 +64,59 @@
 		<attribute name="Rotation" value="1 0 0 0" />
 		<attribute name="Scale" value="0.15 0.15 0.15" />
 		<attribute name="Variables" />
-		<component type="AnimatedSprite2D" id="1185">
+		<component type="AnimatedSprite2D" id="1316">
 			<attribute name="Layer" value="20" />
 			<attribute name="Entity" value="Imp" />
 			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/man/man.scml" />
 			<attribute name="Animation" value="idle" />
 		</component>
-		<component type="RigidBody2D" id="1186">
+		<component type="RigidBody2D" id="1317">
 			<attribute name="Body Type" value="Dynamic" />
 			<attribute name="Mass" value="1" />
 			<attribute name="Allow Sleep" value="false" />
 		</component>
-		<component type="CollisionCircle2D" id="1187">
+		<component type="CollisionCircle2D" id="1318">
 			<attribute name="Radius" value="1.1" />
 			<attribute name="Category Bits" value="1" />
 			<attribute name="Mask Bits" value="65535" />
 			<attribute name="Friction" value="0" />
 			<attribute name="Restitution" value="0.1" />
 		</component>
-		<component type="Character2D" id="1188">
+		<component type="Character2D" id="1319">
 			<attribute name="Move Speed Scale" value="0.5" />
 			<attribute name="Camera Zoom" value="1.6" />
 			<attribute name="Pepsis In Level" value="11" />
 			<attribute name="Remaining Pepsi's" value="11" />
 		</component>
 	</node>
-	<node id="1206">
+	<node id="1337">
 		<attribute name="Is Enabled" value="true" />
 		<attribute name="Name" value="Orc" />
 		<attribute name="Tags" />
-		<attribute name="Position" value="11.84 15.84 0" />
+		<attribute name="Position" value="10.84 16.34 0" />
 		<attribute name="Rotation" value="1 0 0 0" />
 		<attribute name="Scale" value="0.15 0.15 0.15" />
 		<attribute name="Variables" />
-		<component type="AnimatedSprite2D" id="1200">
+		<component type="AnimatedSprite2D" id="1331">
 			<attribute name="Layer" value="19" />
 			<attribute name="Flip X" value="true" />
 			<attribute name="Entity" value="entity_000" />
 			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/Swenson/Swenson.scml" />
 			<attribute name="Animation" value="run" />
 		</component>
-		<component type="RigidBody2D" id="1201" />
-		<component type="CollisionCircle2D" id="1202">
+		<component type="RigidBody2D" id="1332" />
+		<component type="CollisionCircle2D" id="1333">
 			<attribute name="Radius" value="1.3" />
 			<attribute name="Trigger" value="true" />
 			<attribute name="Category Bits" value="1" />
 			<attribute name="Mask Bits" value="65535" />
 		</component>
-		<component type="Mover" id="1203">
-			<attribute name="Path" value="164 112 61 65 163 112 125 65 123 20 46 65 92 143 130 65 153 153 25 65 71 225 122 65 194 245 40 65 51 51 115 65 164 112 61 65 163 112 125 65" />
+		<component type="Mover" id="1334">
+			<attribute name="Path" value="164 112 45 65 82 184 130 65 123 20 30 65 92 143 134 65 153 153 9 65 164 112 129 65 194 245 24 65 51 51 123 65 164 112 45 65 82 184 130 65" />
 			<attribute name="Flip Animation" value="-0.96" />
 		</component>
 	</node>
-	<node id="1207">
+	<node id="1338">
 		<attribute name="Is Enabled" value="true" />
 		<attribute name="Name" value="Orc" />
 		<attribute name="Tags" />
@@ -124,26 +124,26 @@
 		<attribute name="Rotation" value="1 0 0 0" />
 		<attribute name="Scale" value="0.15 0.15 0.15" />
 		<attribute name="Variables" />
-		<component type="AnimatedSprite2D" id="1204">
+		<component type="AnimatedSprite2D" id="1335">
 			<attribute name="Layer" value="19" />
 			<attribute name="Flip X" value="true" />
 			<attribute name="Entity" value="entity_000" />
 			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/Swenson/Swenson.scml" />
 			<attribute name="Animation" value="run" />
 		</component>
-		<component type="RigidBody2D" id="1205" />
-		<component type="CollisionCircle2D" id="1206">
+		<component type="RigidBody2D" id="1336" />
+		<component type="CollisionCircle2D" id="1337">
 			<attribute name="Radius" value="1.3" />
 			<attribute name="Trigger" value="true" />
 			<attribute name="Category Bits" value="1" />
 			<attribute name="Mask Bits" value="65535" />
 		</component>
-		<component type="Mover" id="1207">
+		<component type="Mover" id="1338">
 			<attribute name="Path" value="143 194 117 191 184 30 69 65 41 92 15 192 0 0 64 65 10 215 35 192 20 174 71 65 10 215 163 191 204 204 76 65 143 194 117 191 184 30 69 65" />
 			<attribute name="Flip Animation" value="-1.28" />
 		</component>
 	</node>
-	<node id="1208">
+	<node id="1339">
 		<attribute name="Is Enabled" value="true" />
 		<attribute name="Name" value="Orc" />
 		<attribute name="Tags" />
@@ -151,26 +151,26 @@
 		<attribute name="Rotation" value="1 0 0 0" />
 		<attribute name="Scale" value="0.15 0.15 0.15" />
 		<attribute name="Variables" />
-		<component type="AnimatedSprite2D" id="1208">
+		<component type="AnimatedSprite2D" id="1339">
 			<attribute name="Layer" value="19" />
 			<attribute name="Flip X" value="true" />
 			<attribute name="Entity" value="entity_000" />
 			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/Swenson/Swenson.scml" />
 			<attribute name="Animation" value="run" />
 		</component>
-		<component type="RigidBody2D" id="1209" />
-		<component type="CollisionCircle2D" id="1210">
+		<component type="RigidBody2D" id="1340" />
+		<component type="CollisionCircle2D" id="1341">
 			<attribute name="Radius" value="1.3" />
 			<attribute name="Trigger" value="true" />
 			<attribute name="Category Bits" value="1" />
 			<attribute name="Mask Bits" value="65535" />
 		</component>
-		<component type="Mover" id="1211">
+		<component type="Mover" id="1342">
 			<attribute name="Path" value="184 30 5 193 153 153 25 65 174 71 225 192 41 92 15 65 204 204 204 192 41 92 15 65 92 143 194 192 133 235 17 65 92 143 194 192 61 10 23 65 30 133 235 192 174 71 33 65 0 0 0 193 174 71 33 65 184 30 5 193 82 184 30 65 184 30 5 193 153 153 25 65" />
 			<attribute name="Flip Animation" value="1.28" />
 		</component>
 	</node>
-	<node id="1209">
+	<node id="1340">
 		<attribute name="Is Enabled" value="true" />
 		<attribute name="Name" value="Orc" />
 		<attribute name="Tags" />
@@ -178,26 +178,26 @@
 		<attribute name="Rotation" value="1 0 0 0" />
 		<attribute name="Scale" value="0.15 0.15 0.15" />
 		<attribute name="Variables" />
-		<component type="AnimatedSprite2D" id="1212">
+		<component type="AnimatedSprite2D" id="1343">
 			<attribute name="Layer" value="19" />
 			<attribute name="Flip X" value="true" />
 			<attribute name="Entity" value="entity_000" />
 			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/Swenson/Swenson.scml" />
 			<attribute name="Animation" value="run" />
 		</component>
-		<component type="RigidBody2D" id="1213" />
-		<component type="CollisionCircle2D" id="1214">
+		<component type="RigidBody2D" id="1344" />
+		<component type="CollisionCircle2D" id="1345">
 			<attribute name="Radius" value="1.3" />
 			<attribute name="Trigger" value="true" />
 			<attribute name="Category Bits" value="1" />
 			<attribute name="Mask Bits" value="65535" />
 		</component>
-		<component type="Mover" id="1215">
+		<component type="Mover" id="1346">
 			<attribute name="Path" value="153 153 25 65 184 30 133 65 184 30 133 64 82 184 94 65 204 204 76 64 102 102 102 65 112 61 10 65 194 245 136 65 153 153 25 65 184 30 133 65" />
 			<attribute name="Flip Animation" value="-5.44" />
 		</component>
 	</node>
-	<node id="1210">
+	<node id="1341">
 		<attribute name="Is Enabled" value="true" />
 		<attribute name="Name" value="Orc" />
 		<attribute name="Tags" />
@@ -205,80 +205,80 @@
 		<attribute name="Rotation" value="1 0 0 0" />
 		<attribute name="Scale" value="0.15 0.15 0.15" />
 		<attribute name="Variables" />
-		<component type="AnimatedSprite2D" id="1216">
+		<component type="AnimatedSprite2D" id="1347">
 			<attribute name="Layer" value="19" />
 			<attribute name="Flip X" value="true" />
 			<attribute name="Entity" value="entity_000" />
 			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/Swenson/Swenson.scml" />
 			<attribute name="Animation" value="run" />
 		</component>
-		<component type="RigidBody2D" id="1217" />
-		<component type="CollisionCircle2D" id="1218">
+		<component type="RigidBody2D" id="1348" />
+		<component type="CollisionCircle2D" id="1349">
 			<attribute name="Radius" value="1.3" />
 			<attribute name="Trigger" value="true" />
 			<attribute name="Category Bits" value="1" />
 			<attribute name="Mask Bits" value="65535" />
 		</component>
-		<component type="Mover" id="1219">
+		<component type="Mover" id="1350">
 			<attribute name="Path" value="204 204 204 63 51 51 115 65 235 81 56 64 163 112 125 65 175 71 97 64 163 112 125 65 144 194 117 64 71 225 122 65 153 153 153 64 235 81 120 65 10 215 163 64 71 225 122 65 153 153 153 64 174 71 129 65 41 92 143 64 92 143 130 65 41 92 143 64 184 30 133 65 153 153 153 64 102 102 134 65 123 20 174 64 102 102 134 65 235 81 184 64 184 30 133 65 61 10 215 64 10 215 131 65 174 71 225 64 184 30 133 65 61 10 215 64 194 245 136 65 204 204 204 64 112 61 138 65 204 204 204 64 205 204 140 65 61 10 215 64 123 20 142 65 30 133 235 64 123 20 142 65 143 194 245 64 205 204 140 65 0 0 0 65 194 245 136 65 143 194 245 64 20 174 135 65 61 10 215 64 194 245 136 65 204 204 204 64 112 61 138 65 235 81 184 64 112 61 138 65 123 20 174 64 194 245 136 65 123 20 174 64 102 102 134 65 235 81 184 64 184 30 133 65 92 143 194 64 174 71 129 65 235 81 184 64 0 0 128 65 153 153 153 64 174 71 129 65 41 92 143 64 92 143 130 65 143 194 117 64 92 143 130 65 174 71 97 64 174 71 129 65 175 71 97 64 163 112 125 65 144 194 117 64 71 225 122 65 143 194 117 64 143 194 117 65 174 71 97 64 51 51 115 65 10 215 35 64 30 133 107 65 204 204 204 63 51 51 115 65" />
 			<attribute name="Flip Animation" value="1.28" />
 		</component>
 	</node>
-	<node id="1211">
+	<node id="1342">
 		<attribute name="Is Enabled" value="true" />
 		<attribute name="Name" value="Orc" />
 		<attribute name="Tags" />
-		<attribute name="Position" value="-10.56 10.08 0" />
+		<attribute name="Position" value="-4.52 12.6 0" />
 		<attribute name="Rotation" value="1 0 0 0" />
 		<attribute name="Scale" value="0.15 0.15 0.15" />
 		<attribute name="Variables" />
-		<component type="AnimatedSprite2D" id="1220">
+		<component type="AnimatedSprite2D" id="1351">
 			<attribute name="Layer" value="19" />
 			<attribute name="Flip X" value="true" />
 			<attribute name="Entity" value="entity_000" />
 			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/Swenson/Swenson.scml" />
 			<attribute name="Animation" value="run" />
 		</component>
-		<component type="RigidBody2D" id="1221" />
-		<component type="CollisionCircle2D" id="1222">
+		<component type="RigidBody2D" id="1352" />
+		<component type="CollisionCircle2D" id="1353">
 			<attribute name="Radius" value="1.3" />
 			<attribute name="Trigger" value="true" />
 			<attribute name="Category Bits" value="1" />
 			<attribute name="Mask Bits" value="65535" />
 		</component>
-		<component type="Mover" id="1223">
-			<attribute name="Path" value="196 245 40 193 173 71 33 65 235 81 56 193 153 153 25 65 235 81 56 193 225 122 20 65 123 20 46 193 41 92 15 65 10 215 35 193 41 92 15 65 51 51 51 193 61 10 23 65" />
-			<attribute name="Flip Animation" value="-0.959998" />
+		<component type="Mover" id="1354">
+			<attribute name="Path" value="215 163 144 192 153 153 73 65 215 163 176 192 153 153 65 65 215 163 176 192 225 122 60 65 246 40 156 192 41 92 55 65 20 174 135 192 41 92 55 65 102 102 166 192 61 10 63 65" />
+			<attribute name="Flip Animation" value="-1" />
 		</component>
 	</node>
-	<node id="1212">
+	<node id="1343">
 		<attribute name="Is Enabled" value="true" />
 		<attribute name="Name" value="Orc" />
 		<attribute name="Tags" />
-		<attribute name="Position" value="7.36 13.92 0" />
+		<attribute name="Position" value="7.36 14.92 0" />
 		<attribute name="Rotation" value="1 0 0 0" />
 		<attribute name="Scale" value="0.15 0.15 0.15" />
 		<attribute name="Variables" />
-		<component type="AnimatedSprite2D" id="1224">
+		<component type="AnimatedSprite2D" id="1355">
 			<attribute name="Layer" value="19" />
 			<attribute name="Flip X" value="true" />
 			<attribute name="Entity" value="entity_000" />
 			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/Swenson/Swenson.scml" />
 			<attribute name="Animation" value="run" />
 		</component>
-		<component type="RigidBody2D" id="1225" />
-		<component type="CollisionCircle2D" id="1226">
+		<component type="RigidBody2D" id="1356" />
+		<component type="CollisionCircle2D" id="1357">
 			<attribute name="Radius" value="1.3" />
 			<attribute name="Trigger" value="true" />
 			<attribute name="Category Bits" value="1" />
 			<attribute name="Mask Bits" value="65535" />
 		</component>
-		<component type="Mover" id="1227">
-			<attribute name="Path" value="30 133 235 64 82 184 94 65 61 10 215 64 10 215 99 65 174 71 225 64 102 102 102 65 30 133 235 64 10 215 99 65 30 133 235 64 82 184 94 65 125 20 174 192 213 163 240 64 94 143 194 192 70 225 250 64 174 71 225 192 30 133 235 64 184 30 5 193 0 0 0 65 112 61 10 193 71 225 250 64 204 204 204 192 174 71 225 64 125 20 174 192 213 163 240 64" />
+		<component type="Mover" id="1358">
+			<attribute name="Path" value="30 133 235 64 82 184 110 65 61 10 215 64 10 215 115 65 174 71 225 64 102 102 118 65 30 133 235 64 10 215 115 65 30 133 235 64 82 184 110 65 125 20 174 192 235 81 8 65 94 143 194 192 163 112 13 65 174 71 225 192 143 194 5 65 184 30 5 193 0 0 16 65 112 61 10 193 164 112 13 65 204 204 204 192 215 163 0 65 125 20 174 192 235 81 8 65" />
 			<attribute name="Flip Animation" value="-0.64" />
 		</component>
 	</node>
-	<node id="1213">
+	<node id="1344">
 		<attribute name="Is Enabled" value="true" />
 		<attribute name="Name" value="Orc" />
 		<attribute name="Tags" />
@@ -286,25 +286,25 @@
 		<attribute name="Rotation" value="1 0 0 0" />
 		<attribute name="Scale" value="0.15 0.15 0.15" />
 		<attribute name="Variables" />
-		<component type="AnimatedSprite2D" id="1228">
+		<component type="AnimatedSprite2D" id="1359">
 			<attribute name="Layer" value="19" />
 			<attribute name="Flip X" value="true" />
 			<attribute name="Entity" value="entity_000" />
 			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/Swenson/Swenson.scml" />
 			<attribute name="Animation" value="run" />
 		</component>
-		<component type="RigidBody2D" id="1229" />
-		<component type="CollisionCircle2D" id="1230">
+		<component type="RigidBody2D" id="1360" />
+		<component type="CollisionCircle2D" id="1361">
 			<attribute name="Radius" value="1.3" />
 			<attribute name="Trigger" value="true" />
 			<attribute name="Category Bits" value="1" />
 			<attribute name="Mask Bits" value="65535" />
 		</component>
-		<component type="Mover" id="1231">
+		<component type="Mover" id="1362">
 			<attribute name="Path" value="10 215 35 64 133 235 81 65 10 215 35 64 61 10 87 65 143 194 117 63 10 215 99 65 10 215 163 62 10 215 99 65 246 214 163 190 82 184 94 65 143 194 117 191 82 184 94 65 199 204 204 191 153 153 89 65 204 204 204 191 225 122 84 65 10 215 163 62 184 30 69 65 153 194 117 63 184 30 69 65 10 215 35 64 133 235 81 65" />
 		</component>
 	</node>
-	<node id="1215">
+	<node id="1346">
 		<attribute name="Is Enabled" value="true" />
 		<attribute name="Name" value="Pepsi" />
 		<attribute name="Tags" />
@@ -312,21 +312,21 @@
 		<attribute name="Rotation" value="1 0 0 0" />
 		<attribute name="Scale" value="0.5 0.5 0.5" />
 		<attribute name="Variables" />
-		<component type="AnimatedSprite2D" id="1235">
+		<component type="AnimatedSprite2D" id="1366">
 			<attribute name="Layer" value="4" />
 			<attribute name="Entity" value="entity_000" />
 			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/PepsiIconRotate.scml" />
 			<attribute name="Animation" value="idle" />
 		</component>
-		<component type="RigidBody2D" id="1236" />
-		<component type="CollisionBox2D" id="1237">
+		<component type="RigidBody2D" id="1367" />
+		<component type="CollisionBox2D" id="1368">
 			<attribute name="Size" value="0.4 1.1" />
 			<attribute name="Trigger" value="true" />
 			<attribute name="Category Bits" value="1" />
 			<attribute name="Mask Bits" value="65535" />
 		</component>
 	</node>
-	<node id="1216">
+	<node id="1347">
 		<attribute name="Is Enabled" value="true" />
 		<attribute name="Name" value="Pepsi" />
 		<attribute name="Tags" />
@@ -334,21 +334,21 @@
 		<attribute name="Rotation" value="1 0 0 0" />
 		<attribute name="Scale" value="0.5 0.5 0.5" />
 		<attribute name="Variables" />
-		<component type="AnimatedSprite2D" id="1238">
+		<component type="AnimatedSprite2D" id="1369">
 			<attribute name="Layer" value="4" />
 			<attribute name="Entity" value="entity_000" />
 			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/PepsiIconRotate.scml" />
 			<attribute name="Animation" value="idle" />
 		</component>
-		<component type="RigidBody2D" id="1239" />
-		<component type="CollisionBox2D" id="1240">
+		<component type="RigidBody2D" id="1370" />
+		<component type="CollisionBox2D" id="1371">
 			<attribute name="Size" value="0.4 1.1" />
 			<attribute name="Trigger" value="true" />
 			<attribute name="Category Bits" value="1" />
 			<attribute name="Mask Bits" value="65535" />
 		</component>
 	</node>
-	<node id="1217">
+	<node id="1348">
 		<attribute name="Is Enabled" value="true" />
 		<attribute name="Name" value="Pepsi" />
 		<attribute name="Tags" />
@@ -356,21 +356,21 @@
 		<attribute name="Rotation" value="1 0 0 0" />
 		<attribute name="Scale" value="0.5 0.5 0.5" />
 		<attribute name="Variables" />
-		<component type="AnimatedSprite2D" id="1241">
+		<component type="AnimatedSprite2D" id="1372">
 			<attribute name="Layer" value="4" />
 			<attribute name="Entity" value="entity_000" />
 			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/PepsiIconRotate.scml" />
 			<attribute name="Animation" value="idle" />
 		</component>
-		<component type="RigidBody2D" id="1242" />
-		<component type="CollisionBox2D" id="1243">
+		<component type="RigidBody2D" id="1373" />
+		<component type="CollisionBox2D" id="1374">
 			<attribute name="Size" value="0.4 1.1" />
 			<attribute name="Trigger" value="true" />
 			<attribute name="Category Bits" value="1" />
 			<attribute name="Mask Bits" value="65535" />
 		</component>
 	</node>
-	<node id="1218">
+	<node id="1349">
 		<attribute name="Is Enabled" value="true" />
 		<attribute name="Name" value="Pepsi" />
 		<attribute name="Tags" />
@@ -378,21 +378,21 @@
 		<attribute name="Rotation" value="1 0 0 0" />
 		<attribute name="Scale" value="0.5 0.5 0.5" />
 		<attribute name="Variables" />
-		<component type="AnimatedSprite2D" id="1244">
+		<component type="AnimatedSprite2D" id="1375">
 			<attribute name="Layer" value="4" />
 			<attribute name="Entity" value="entity_000" />
 			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/PepsiIconRotate.scml" />
 			<attribute name="Animation" value="idle" />
 		</component>
-		<component type="RigidBody2D" id="1245" />
-		<component type="CollisionBox2D" id="1246">
+		<component type="RigidBody2D" id="1376" />
+		<component type="CollisionBox2D" id="1377">
 			<attribute name="Size" value="0.4 1.1" />
 			<attribute name="Trigger" value="true" />
 			<attribute name="Category Bits" value="1" />
 			<attribute name="Mask Bits" value="65535" />
 		</component>
 	</node>
-	<node id="1219">
+	<node id="1350">
 		<attribute name="Is Enabled" value="true" />
 		<attribute name="Name" value="Pepsi" />
 		<attribute name="Tags" />
@@ -400,21 +400,21 @@
 		<attribute name="Rotation" value="1 0 0 0" />
 		<attribute name="Scale" value="0.5 0.5 0.5" />
 		<attribute name="Variables" />
-		<component type="AnimatedSprite2D" id="1247">
+		<component type="AnimatedSprite2D" id="1378">
 			<attribute name="Layer" value="4" />
 			<attribute name="Entity" value="entity_000" />
 			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/PepsiIconRotate.scml" />
 			<attribute name="Animation" value="idle" />
 		</component>
-		<component type="RigidBody2D" id="1248" />
-		<component type="CollisionBox2D" id="1249">
+		<component type="RigidBody2D" id="1379" />
+		<component type="CollisionBox2D" id="1380">
 			<attribute name="Size" value="0.4 1.1" />
 			<attribute name="Trigger" value="true" />
 			<attribute name="Category Bits" value="1" />
 			<attribute name="Mask Bits" value="65535" />
 		</component>
 	</node>
-	<node id="1220">
+	<node id="1351">
 		<attribute name="Is Enabled" value="true" />
 		<attribute name="Name" value="Pepsi" />
 		<attribute name="Tags" />
@@ -422,21 +422,21 @@
 		<attribute name="Rotation" value="1 0 0 0" />
 		<attribute name="Scale" value="0.5 0.5 0.5" />
 		<attribute name="Variables" />
-		<component type="AnimatedSprite2D" id="1250">
+		<component type="AnimatedSprite2D" id="1381">
 			<attribute name="Layer" value="4" />
 			<attribute name="Entity" value="entity_000" />
 			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/PepsiIconRotate.scml" />
 			<attribute name="Animation" value="idle" />
 		</component>
-		<component type="RigidBody2D" id="1251" />
-		<component type="CollisionBox2D" id="1252">
+		<component type="RigidBody2D" id="1382" />
+		<component type="CollisionBox2D" id="1383">
 			<attribute name="Size" value="0.4 1.1" />
 			<attribute name="Trigger" value="true" />
 			<attribute name="Category Bits" value="1" />
 			<attribute name="Mask Bits" value="65535" />
 		</component>
 	</node>
-	<node id="1221">
+	<node id="1352">
 		<attribute name="Is Enabled" value="true" />
 		<attribute name="Name" value="Pepsi" />
 		<attribute name="Tags" />
@@ -444,21 +444,21 @@
 		<attribute name="Rotation" value="1 0 0 0" />
 		<attribute name="Scale" value="0.5 0.5 0.5" />
 		<attribute name="Variables" />
-		<component type="AnimatedSprite2D" id="1253">
+		<component type="AnimatedSprite2D" id="1384">
 			<attribute name="Layer" value="4" />
 			<attribute name="Entity" value="entity_000" />
 			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/PepsiIconRotate.scml" />
 			<attribute name="Animation" value="idle" />
 		</component>
-		<component type="RigidBody2D" id="1254" />
-		<component type="CollisionBox2D" id="1255">
+		<component type="RigidBody2D" id="1385" />
+		<component type="CollisionBox2D" id="1386">
 			<attribute name="Size" value="0.4 1.1" />
 			<attribute name="Trigger" value="true" />
 			<attribute name="Category Bits" value="1" />
 			<attribute name="Mask Bits" value="65535" />
 		</component>
 	</node>
-	<node id="1222">
+	<node id="1353">
 		<attribute name="Is Enabled" value="true" />
 		<attribute name="Name" value="Pepsi" />
 		<attribute name="Tags" />
@@ -466,21 +466,21 @@
 		<attribute name="Rotation" value="1 0 0 0" />
 		<attribute name="Scale" value="0.5 0.5 0.5" />
 		<attribute name="Variables" />
-		<component type="AnimatedSprite2D" id="1256">
+		<component type="AnimatedSprite2D" id="1387">
 			<attribute name="Layer" value="4" />
 			<attribute name="Entity" value="entity_000" />
 			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/PepsiIconRotate.scml" />
 			<attribute name="Animation" value="idle" />
 		</component>
-		<component type="RigidBody2D" id="1257" />
-		<component type="CollisionBox2D" id="1258">
+		<component type="RigidBody2D" id="1388" />
+		<component type="CollisionBox2D" id="1389">
 			<attribute name="Size" value="0.4 1.1" />
 			<attribute name="Trigger" value="true" />
 			<attribute name="Category Bits" value="1" />
 			<attribute name="Mask Bits" value="65535" />
 		</component>
 	</node>
-	<node id="1223">
+	<node id="1354">
 		<attribute name="Is Enabled" value="true" />
 		<attribute name="Name" value="Pepsi" />
 		<attribute name="Tags" />
@@ -488,21 +488,21 @@
 		<attribute name="Rotation" value="1 0 0 0" />
 		<attribute name="Scale" value="0.5 0.5 0.5" />
 		<attribute name="Variables" />
-		<component type="AnimatedSprite2D" id="1259">
+		<component type="AnimatedSprite2D" id="1390">
 			<attribute name="Layer" value="4" />
 			<attribute name="Entity" value="entity_000" />
 			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/PepsiIconRotate.scml" />
 			<attribute name="Animation" value="idle" />
 		</component>
-		<component type="RigidBody2D" id="1260" />
-		<component type="CollisionBox2D" id="1261">
+		<component type="RigidBody2D" id="1391" />
+		<component type="CollisionBox2D" id="1392">
 			<attribute name="Size" value="0.4 1.1" />
 			<attribute name="Trigger" value="true" />
 			<attribute name="Category Bits" value="1" />
 			<attribute name="Mask Bits" value="65535" />
 		</component>
 	</node>
-	<node id="1224">
+	<node id="1355">
 		<attribute name="Is Enabled" value="true" />
 		<attribute name="Name" value="Pepsi" />
 		<attribute name="Tags" />
@@ -510,21 +510,21 @@
 		<attribute name="Rotation" value="1 0 0 0" />
 		<attribute name="Scale" value="0.5 0.5 0.5" />
 		<attribute name="Variables" />
-		<component type="AnimatedSprite2D" id="1262">
+		<component type="AnimatedSprite2D" id="1393">
 			<attribute name="Layer" value="4" />
 			<attribute name="Entity" value="entity_000" />
 			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/PepsiIconRotate.scml" />
 			<attribute name="Animation" value="idle" />
 		</component>
-		<component type="RigidBody2D" id="1263" />
-		<component type="CollisionBox2D" id="1264">
+		<component type="RigidBody2D" id="1394" />
+		<component type="CollisionBox2D" id="1395">
 			<attribute name="Size" value="0.4 1.1" />
 			<attribute name="Trigger" value="true" />
 			<attribute name="Category Bits" value="1" />
 			<attribute name="Mask Bits" value="65535" />
 		</component>
 	</node>
-	<node id="1225">
+	<node id="1356">
 		<attribute name="Is Enabled" value="true" />
 		<attribute name="Name" value="Pepsi" />
 		<attribute name="Tags" />
@@ -532,14 +532,14 @@
 		<attribute name="Rotation" value="1 0 0 0" />
 		<attribute name="Scale" value="0.5 0.5 0.5" />
 		<attribute name="Variables" />
-		<component type="AnimatedSprite2D" id="1265">
+		<component type="AnimatedSprite2D" id="1396">
 			<attribute name="Layer" value="4" />
 			<attribute name="Entity" value="entity_000" />
 			<attribute name="Animation Set" value="AnimationSet2D;Urho2D/PepsiIconRotate.scml" />
 			<attribute name="Animation" value="idle" />
 		</component>
-		<component type="RigidBody2D" id="1266" />
-		<component type="CollisionBox2D" id="1267">
+		<component type="RigidBody2D" id="1397" />
+		<component type="CollisionBox2D" id="1398">
 			<attribute name="Size" value="0.4 1.1" />
 			<attribute name="Trigger" value="true" />
 			<attribute name="Category Bits" value="1" />
