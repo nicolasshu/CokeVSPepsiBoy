@@ -175,7 +175,7 @@ Node* Sample2D::CreateCharacter(TileMapInfo2D info, float friction, Vector3 posi
     auto* animationSet = cache->GetResource<AnimationSet2D>("Urho2D/man/man.scml");
     animatedSprite->SetAnimationSet(animationSet);
     animatedSprite->SetAnimation("idle");
-    animatedSprite->SetLayer(3); // Put character over tile map (which is on layer 0) and over Brians (which are on layer 2)
+    animatedSprite->SetLayer(20); // Put character over tile map (which is on layer 0) and over Brians (which are on layer 2)
     auto* impBody = spriteNode->CreateComponent<RigidBody2D>();
     impBody->SetBodyType(BT_DYNAMIC);
     impBody->SetAllowSleep(false);
@@ -218,7 +218,7 @@ Node* Sample2D::CreateBrian() {
     auto* animationSet = cache->GetResource<AnimationSet2D>("Urho2D/Swenson/Swenson.scml");
     animatedSprite->SetAnimationSet(animationSet);
     animatedSprite->SetAnimation("run"); // Get scml file and Play "run" anim
-    animatedSprite->SetLayer(2); // Make brian always visible
+    animatedSprite->SetLayer(19); // Make brian always visible
     auto* body = node->CreateComponent<RigidBody2D>();
     auto* shape = node->CreateComponent<CollisionCircle2D>();
     shape->SetRadius(1.3f); // Set shape size
